@@ -1,0 +1,33 @@
+Group #8 Paul, Patrick, David, Dennis 
+
+"Story Time" - ebooks for kids
+
+login page with email and password
+    - ? uses login API
+    - ? add user data?
+
+home:
+    - user info attatched to login
+    - mybooks holds all books user has in their profile
+    - library links to all available books for page
+
+mybooks:
+    - bootstrap carousel for book choice
+        - "read book" button 
+        - display info on book click
+    - skill level and/or book info
+
+library:
+    - holds book selection and future selection
+    - uses amazon or some kind of book API
+
+
+    book-display:
+        - auto play on start
+        - display books as carousel
+        - button menu under page display play/pause
+        - top menu to navigate around full site
+
+APIs:
+text-to-speech
+google books library - looks up book info
