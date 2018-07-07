@@ -1,0 +1,28 @@
+.main {
+    background-image: linear-gradient( #00e699 ,  #0099ff ,  #6666ff);
+    height: 100vh;
+}
+
+.header {
+    text-align: center;
+    color: white;
+
+}
+
+.nav-area{
+    height: 80vh;
+}
+
+.col-sm {
+    text-align: center;
+    align-self: center;
+}
+
+.carousel {
+    text-align: center;
+    align-self: center;
+}
+
+p {
+    display: inline;
+}
