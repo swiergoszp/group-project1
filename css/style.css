@@ -1,0 +1,82 @@
+/* container that holds all content and sets size of page so content can be centered */
+main {
+    background: radial-gradient(#FCCD04 , #FFB48F , #F5E6CC );
+    height: 110vh;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bolder;
+}
+
+/* displays title on main page */
+.header {
+    padding-top: 20px;
+    text-align: center;
+    color: #A64Ac9;
+    font-size: 400%;
+}
+
+/* mods for navbar */
+.navbar {
+    background: linear-gradient(to right, #17E9E0 , #A64Ac9);
+}
+
+/* div class that holds nav content for main page */
+.nav-area{
+    height: 80vh;
+}
+
+/* controls the nav buttons on the main page */
+.nav-pics {
+    text-align: center;
+    align-self: center;
+    border: 3px #A64Ac9 solid;
+    border-radius: 75px;
+    margin: 0 10px 0 10px;
+}
+
+.nav-pics:hover {
+    color: #C1C8E4;
+}
+
+/* words under nav pics on main page */
+.nav-words {
+    font-size: 220%;
+    color: #A64Ac9;
+}
+
+/* adjusts clickable images inside nav-pics */
+.fas  {
+    color: #A64Ac9;
+    margin-top: 5px;
+}
+
+.fas:hover {
+    color: #17E9E0;
+}
+
+/* container for carousel images */
+#carouselExampleControls {
+    text-align: center;
+    align-self: center;
+}
+
+/* individual items in carousel, holds carousel-items and carousel-images */
+/* .carousel-items {
+    
+} */
+
+/* class for all images in carousel */
+.carousel-images {
+    height: 400px;
+    width: auto;
+}
+
+/* right now used for titles under images on main page */
+p {
+    display: inline;
+}
+
+/* individual items in top navbar */
+.nav-item {
+    margin-right: 15px;
+    color: #A64Ac9;
+}
