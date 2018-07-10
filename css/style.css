@@ -1,28 +1,79 @@
-.main {
-    background-image: linear-gradient( #00e699 ,  #0099ff ,  #6666ff);
+/* container that holds all content and sets size of page so content can be centered */
+main {
+    background-image: linear-gradient(#8860D0 , #C1C8E4);
     height: 100vh;
+    font-family: 'Shadows Into Light', cursive;
 }
 
+/* displays title on main page */
 .header {
+    padding-top: 20px;
     text-align: center;
-    color: white;
-
+    color: #C1C8E4;
 }
 
+/* div class that holds nav content for main page */
 .nav-area{
     height: 80vh;
 }
 
-.col-sm {
+/* controls the nav buttons on the main oage */
+.nav-pics {
+    text-align: center;
+    align-self: center;
+    color: #84CEEB;
+    border: 1px #84CEEB solid;
+    border-radius: 75px;
+    margin: 0 10px 0 10px;
+}
+
+.nav-pics:hover {
+    color: #C1C8E4;
+}
+
+/* words under nav pics on main page */
+.nav-words {
+    font-size: 200%;
+}
+
+/* adjusts clickable images inside nav-pics */
+.fas  {
+    color: #84CEEB;
+    margin-top: 5px;
+}
+
+.fas:hover {
+    color: #C1C8E4;
+}
+
+/* container for carousel images */
+#carouselExampleControls {
     text-align: center;
     align-self: center;
 }
 
-.carousel {
-    text-align: center;
-    align-self: center;
+/* individual items in carousel, holds carousel-items and carousel-images */
+/* .carousel-items {
+    
+} */
+
+/* class for all images in carousel */
+.carousel-images {
+    height: 400px;
+    width: auto;
 }
 
+/* right now used for titles under images on main page */
 p {
     display: inline;
+}
+
+/* mods for the whole navbar list */
+ul {
+    list-style-type: none;
+}
+
+/* individual items in top navbar */
+.nav-item {
+    margin-right: 15px;
 }
