@@ -1,15 +1,22 @@
 /* container that holds all content and sets size of page so content can be centered */
 main {
-    background-image: linear-gradient(#8860D0 , #C1C8E4);
-    height: 100vh;
+    background: radial-gradient(#FCCD04 , #FFB48F , #F5E6CC );
+    height: 110vh;
     font-family: 'Shadows Into Light', cursive;
+    font-weight: bolder;
 }
 
 /* displays title on main page */
 .header {
     padding-top: 20px;
     text-align: center;
-    color: #C1C8E4;
+    color: #A64Ac9;
+    font-size: 400%;
+}
+
+/* mods for navbar */
+.navbar {
+    background: linear-gradient(to right, #17E9E0 , #A64Ac9);
 }
 
 /* div class that holds nav content for main page */
@@ -17,12 +24,11 @@ main {
     height: 80vh;
 }
 
-/* controls the nav buttons on the main oage */
+/* controls the nav buttons on the main page */
 .nav-pics {
     text-align: center;
     align-self: center;
-    color: #84CEEB;
-    border: 1px #84CEEB solid;
+    border: 3px #A64Ac9 solid;
     border-radius: 75px;
     margin: 0 10px 0 10px;
 }
@@ -33,17 +39,18 @@ main {
 
 /* words under nav pics on main page */
 .nav-words {
-    font-size: 200%;
+    font-size: 220%;
+    color: #A64Ac9;
 }
 
 /* adjusts clickable images inside nav-pics */
 .fas  {
-    color: #84CEEB;
+    color: #A64Ac9;
     margin-top: 5px;
 }
 
 .fas:hover {
-    color: #C1C8E4;
+    color: #17E9E0;
 }
 
 /* container for carousel images */
@@ -68,12 +75,8 @@ p {
     display: inline;
 }
 
-/* mods for the whole navbar list */
-ul {
-    list-style-type: none;
-}
-
 /* individual items in top navbar */
 .nav-item {
     margin-right: 15px;
+    color: #A64Ac9;
 }
