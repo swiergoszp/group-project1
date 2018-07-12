@@ -45,22 +45,29 @@
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image:url(assets/images/pigeon.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(assets/images/mouse.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(assets/images/moon.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(assets/images/caterpillar.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(assets/images/gas.jpg)"></div>
+            <div class="swiper-slide" value="Dont Let the Pigeon Drive the Bus" style="background-image:url(assets/images/pigeon.jpg)"></div>
+            <div class="swiper-slide" value="If You Give A Mouse A Cookie" style="background-image:url(assets/images/mouse.jpg)"></div>
+            <div class="swiper-slide" value="Goodnight Moon" style="background-image:url(assets/images/moon.jpg)"></div>
+            <div class="swiper-slide" value="The Very Hungry Caterpillar" style="background-image:url(assets/images/caterpillar.jpg)"></div>
+            <div class="swiper-slide" value="The Gas We Pass" style="background-image:url(assets/images/gas.jpg)"></div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
     </div>
-    
-    <!-- Swiper JS -->
-    <script src="assets/swiper/dist/js/swiper.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
+    <div class="row library-buttons">
+        <button class="get-book-button">Add to My Books</button>
+        <button class="wishlist-button">Add to My Wishlist</button>
+    </div>
+
+</main>
+
+<!-- Swiper JS -->
+<script src="assets/swiper/dist/js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
         effect: 'coverflow',
         grabCursor: true,
         centeredSlides: true,
@@ -72,13 +79,11 @@
             modifier: 1,
             slideShadows : true,
         },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        });
-    </script>
-
-</main>
+            pagination: {
+                el: '.swiper-pagination',
+            },
+    });
+</script>
 
 <!-- Swiper -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
