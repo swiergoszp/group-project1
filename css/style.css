@@ -1,13 +1,14 @@
 /* container that holds all content and sets size of page so content can be centered */
 main {
     background: radial-gradient(#FCCD04 , #FFB48F , #F5E6CC );
-    height: 110vh;
+    height: 100vh;
     font-family: 'Shadows Into Light', cursive;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 /* displays title on main page */
 .header {
+    margin: 0;
     padding-top: 20px;
     text-align: center;
     color: #A64Ac9;
@@ -18,6 +19,11 @@ main {
 .navbar {
     background: linear-gradient(to right, #17E9E0 , #A64Ac9);
 }
+
+/* log out button */
+/* .log-out {
+
+} */
 
 /* div class that holds nav content for main page */
 .nav-area{
@@ -53,23 +59,6 @@ main {
     color: #17E9E0;
 }
 
-/* container for carousel images */
-#carouselExampleControls {
-    text-align: center;
-    align-self: center;
-}
-
-/* individual items in carousel, holds carousel-items and carousel-images */
-/* .carousel-items {
-    
-} */
-
-/* class for all images in carousel */
-.carousel-images {
-    height: 400px;
-    width: auto;
-}
-
 /* right now used for titles under images on main page */
 p {
     display: inline;
@@ -79,4 +68,60 @@ p {
 .nav-item {
     margin-right: 15px;
     color: #A64Ac9;
+}
+
+/* adjusts the carousel on library and book pages */
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* adjusts the carousel on library and book pages */
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+/* adjusts buttons on library page, which are the next two listed */
+.library-buttons {
+    justify-content: center;
+}
+
+.get-book-button {
+    margin-right: 10px;
+    background-color: #A64Ac9;
+    color: #F5E6CC;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.get-book-button:hover {
+    background-color: #F5E6CC;
+    color: #A64Ac9;
+}
+
+.wishlist-button {
+    margin-left: 10px;
+    background-color: #A64Ac9;
+    color: #F5E6CC;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.wishlist-button:hover {
+    background-color: #F5E6CC;
+    color: #A64Ac9;
+}
+
+/* users uploaded info on their homepage */
+.user-info {
+    margin-top: 20px;
+}
+
+/* list of books the user has competed */
+.books-read {
+    list-style-type: none;
 }
