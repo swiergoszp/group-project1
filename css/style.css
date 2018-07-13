@@ -115,3 +115,13 @@ p {
     background-color: #F5E6CC;
     color: #A64Ac9;
 }
+
+/* users uploaded info on their homepage */
+.user-info {
+    margin-top: 20px;
+}
+
+/* list of books the user has competed */
+.books-read {
+    list-style-type: none;
+}
