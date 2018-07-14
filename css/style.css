@@ -156,7 +156,7 @@ Landing Animation Start
 }
 
 #books{
-    /* postion: fixed; */
+     postion: fixed; 
     margin-left: 80px;
     text-align: center;
     z-index: 2;
@@ -173,7 +173,7 @@ Landing Animation Start
 }
 
 #libraryIcon{
-    /* position: absolute; */
+     position: absolute; 
     margin-right: 30px;
     text-align: center;
     z-index: 2;
@@ -195,7 +195,7 @@ Landing Animation Start
     margin-right: 30px;
     text-align: center;
     z-index: 2;
-/*    height: 14.0em;*/
+/*    hei÷ght: 14.0em;*/
     margin-top: 0px;
     display: block;
     margin-left: 0px;
@@ -338,6 +338,13 @@ Swiper End
 */
 
 
+/*
+Start Media Query 1200
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    
+*/
+
 @media only screen and (max-width: 1200px){
     
 #path {
@@ -351,6 +358,43 @@ Swiper End
 -webkit-animation-iteration-count: 1;
     animation-name: fadeInUp;
 }
+    
+/*
+#books{
+     postion: fixed; 
+    margin-left: 80px;
+    text-align: center;
+    z-index: 2;
+    height: 8.0em;
+    margin-top: 0px;
+    display: block;
+    margin-left: 0px;
+    margin-right: ;
+-webkit-animation-duration: 2s;
+-webkit-animation-delay: ;
+-webkit-animation-iteration-count: infinite;
+    animation-name: floater ;
+    
+}
+
+#libraryIcon{
+     position: absolute; 
+    margin-right: 30px;
+    text-align: center;
+    z-index: 2;
+    height: 2.0em;
+    margin-top: 0px;
+    display: block;
+    margin-left: 0px;
+    margin-right: ;
+-webkit-animation-duration: 2s;
+-webkit-animation-delay: ;
+-webkit-animation-iteration-count: infinite;
+    animation-name: floater ;
+    
+}
+*/
+    
 
 
 /*
