@@ -17,7 +17,8 @@ main {
 
 #mainLinks {
     padding-top: 20px;
-    justify-content: space-around;
+    position: relative;
+    bottom: 700px;
 }
 
 /*
@@ -156,7 +157,7 @@ Landing Animation Start
 }
 
 #books{
-    /* postion: fixed; */
+    postion: fixed;
     margin-left: 80px;
     text-align: center;
     z-index: 2;
@@ -173,7 +174,7 @@ Landing Animation Start
 }
 
 #libraryIcon{
-    /* position: absolute; */
+    position: absolute;
     margin-right: 30px;
     text-align: center;
     z-index: 2;
@@ -185,7 +186,7 @@ Landing Animation Start
 -webkit-animation-duration: 2s;
 -webkit-animation-delay: ;
 -webkit-animation-iteration-count: infinite;
-    animation-name: floater ;
+    animation-name: floater;
     
 }
 
@@ -317,6 +318,19 @@ Swiper Start
 }
 
 .wishlist-button:hover {
+    background-color: #F5E6CC;
+    color: #A64Ac9;
+}
+
+.read-button {
+    margin-left: 10px;
+    background-color: #A64Ac9;
+    color: #F5E6CC;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.read-button:hover {
     background-color: #F5E6CC;
     color: #A64Ac9;
 }
@@ -952,9 +966,3 @@ End Media Query 640
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     
 */
-
-
-
-
-
-

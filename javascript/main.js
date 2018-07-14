@@ -13,7 +13,16 @@ $(document).ready(function() {
     $(".wishlist-button").on("click" , function() {
         
         // the class here changes to whichever slide is in the main position
-        var book = $(".swiper-slide-active").text();
+        var book = $(".swiper-slide-active").val();
+        console.log(book);
+
+    });
+
+    // sets up click event for adding book to wishlist
+    $(".read-button").on("click" , function() {
+        
+        // the class here changes to whichever slide is in the main position
+        var book = $(".swiper-slide-active").val();
         console.log(book);
 
     });
