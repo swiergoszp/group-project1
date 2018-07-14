@@ -143,6 +143,12 @@ $(window).bind('keydown', function(e){
     else if (e.keyCode==39)
         $('#Caterpillar').turn('next');
 });
+$('#prev').click(function(){
+    $('#Caterpillar').turn('previous');
+});
+$('#nex').click(function(){
+    $('#Caterpillar').turn('next');
+});
 
 var music = document.getElementById("music")
 music.volume = 0.05;

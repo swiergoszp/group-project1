@@ -1,6 +1,4 @@
-body {
-	background-color: blue;
-}
+
 
 /* #Caterpillar {
 	width: 1152px;
@@ -28,6 +26,12 @@ body {
 
 #cover {
 	background-image: url("images/TitlePage.JPG");
+}
+#firstBook{
+	border-style: solid;
+	border-width: 5px;
+	border-color: brown;
+	background-image: url("images/bg.jpg")
 }
 
 
