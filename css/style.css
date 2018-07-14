@@ -338,6 +338,621 @@ Swiper End
 */
 
 
+@media only screen and (max-width: 1200px){
+    
+#path {
+    z-index:0;
+    height: 240px;
+    margin-top: 230px;
+    margin-left: -10px;
+    display: block;
+-webkit-animation-duration: 9s;
+-webkit-animation-delay: 0s;
+-webkit-animation-iteration-count: 1;
+    animation-name: fadeInUp;
+}
+
+
+/*
+Start Media Query 768
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    
+*/
+    
+@media only screen and (max-width: 768px){
+    
+#path {
+    z-index:0;
+    height: 180px;
+    margin-top: 280px;
+    margin-left: 50px;
+    display: block;
+-webkit-animation-duration: 9s;
+-webkit-animation-delay: 0s;
+-webkit-animation-iteration-count: 1;
+    animation-name: fadeInUp;
+}
+
+#cloud {
+    z-index: 0;
+    height: 7.0em;
+    display: block;
+    margin-left: ;
+    margin-right: ;
+-webkit-animation-duration: 5s;
+-webkit-animation-delay: 0s;
+-webkit-animation-iteration-count: 1;
+    animation-name: fadeInLeftBig ;
+       
+}
+
+#cloud1 {
+    z-index: 1;
+    height: 8.0em;
+    margin-top: 00px;
+    display: block;
+    margin-left: ;
+    margin-right: ;
+-webkit-animation-duration: 5s;
+-webkit-animation-delay: 0s;
+-webkit-animation-iteration-count: 1;
+    animation-name: fadeInRightBig ;
+    
+}
+
+#cloud2 {
+    z-index: 1;
+    height: 4.0em;
+    margin: -60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+-webkit-animation-duration: 3s;
+-webkit-animation-delay: 0s;
+-webkit-animation-iteration-count: infinite;
+/*    animation-name: fadeInLeftBig ;*/
+    
+}
+
+#cloud3 {
+    z-index: 1;
+    height: 6.0em;
+    margin-left: 40px;
+    display: block;
+    margin-left: ;
+    margin-right:;
+    margin-top: 25px;
+-webkit-animation-duration: 3s;
+-webkit-animation-delay: 0s;
+-webkit-animation-iteration-count: infinite;
+/*    animation-name: slideInLeft ;*/
+    
+}
+
+
+#cloud4 {
+    z-index: 1;
+    height: 5.0em;
+    margin-left: px;
+    display: block;
+    margin-left: ;
+    margin-right:;
+    margin-top: -40px;
+-webkit-animation-duration: 6s;
+-webkit-animation-delay: 0s;
+-webkit-animation-iteration-count: 1;
+    animation-name: fadeInLeftBig ;
+    
+}
+
+
+
+#treeHouse {
+    z-index: 1;
+    height: 26.0em;
+    margin-top: 120px;
+    display: block;
+    margin-left: ;
+    margin-right: auto;
+-webkit-animation-duration: 3s;
+-webkit-animation-delay: 2s;
+-webkit-animation-iteration-count: infinite;
+/*    animation-name: slideInLeft ;*/
+    
+}
+
+#bush {
+    z-index: 1;
+    height: 4.0em;
+    margin-top: 440px;
+    display: block;
+    margin-left: 20px;
+    margin-right: ;
+-webkit-animation-duration: 7s;
+-webkit-animation-delay: 2s;
+-webkit-animation-iteration-count: infinite;
+/*    animation-name: slideInLeft ;*/
+    
+}
+
+#tree1{
+    z-index: 2;
+    height: 6.0em;
+    margin-top: 350px;
+    display: block;
+    margin-left: 220px;
+    margin-right: ;
+-webkit-animation-duration: 10s;
+-webkit-animation-delay: ;
+-webkit-animation-iteration-count: infinite;
+/*    animation-name: wiggle ;*/
+    
+}
+
+#books{
+    display:none;
+}
+
+#libraryIcon{
+    display:none;
+}
+    
+#header{
+    color:#A64Ac9;
+    font-size: 65px;
+    margin-right: 30px;
+    text-align: center;
+    z-index: 2;
+/*    height: 14.0em;*/
+    margin-top: 0px;
+    display: block;
+    margin-left: 0px;
+    margin-right: ;
+-webkit-animation-duration: 9s;
+-webkit-animation-delay: ;
+-webkit-animation-iteration-count: 1;
+    animation-name: zoomInDown ;
+    
+}
+
+/*
+Landing Animation End
+*********************************************************
+
+Side Nav Start
+*********************************************************
+*/
+
+/* Style the links inside the sidenav */
+#mySidenav a {
+    z-index: 100;
+    position: absolute; /* Position them relative to the browser window */
+    left: -160px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 10px; /* 15px padding */
+    width: 250px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 30px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 0 15px 15px 0; /* Rounded corners on the top right and bottom right side */
+    
+}
+
+#mySidenav a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#home {
+    top: 20px;
+    background-color: #4CAF50;
+    height: 100px;
+    text-align: center;
+    line-height: 80px;
+}
+
+#myBooks {
+    top: 180px;
+    background-color: #2196F3; /* Blue */
+    height: 100px;
+    text-align: center;
+    line-height: 80px;
+}
+
+#library {
+    top: 340px;
+    background-color: #f44336; /* Red */
+    height: 100px;
+    text-align: center;
+    line-height: 80px;
+}
+
+#user {
+    top: 500px;
+    background-color: #A64Ac9; /* Light Black */
+    height: 100px;
+    text-align: center;
+    line-height: 80px;
+}
+
+
+/*
+Side Nav End
+*********************************************************
+Swiper Start
+*********************************************************
+*/
+
+/* adjusts the carousel on library and book pages */
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* adjusts the carousel on library and book pages */
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+/* adjusts buttons on library page, which are the next two listed */
+.library-buttons {
+    justify-content: center;
+}
+
+.get-book-button {
+    margin-right: 10px;
+    background-color: #A64Ac9;
+    color: #F5E6CC;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.get-book-button:hover {
+    background-color: #F5E6CC;
+    color: #A64Ac9;
+}
+
+.wishlist-button {
+    margin-left: 10px;
+    background-color: #A64Ac9;
+    color: #F5E6CC;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.wishlist-button:hover {
+    background-color: #F5E6CC;
+    color: #A64Ac9;
+}
+
+/* users uploaded info on their homepage */
+.user-info {
+    margin-top: 20px;
+}
+
+/* list of books the user has competed */
+.books-read {
+    list-style-type: none;
+}
+
+/*
+Swiper End
+*********************************************************
+*/
+   
+/*
+End Media Query 768
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    
+*/
+
+    
+
+/*
+Start Media Query 640
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    
+*/
+    
+@media only screen and (max-width: 640px){
+    
+#path {
+    z-index:0;
+    height: 180px;
+    margin-top: 280px;
+    margin-left: 50px;
+    display: block;
+-webkit-animation-duration: 9s;
+-webkit-animation-delay: 0s;
+-webkit-animation-iteration-count: 1;
+    animation-name: fadeInUp;
+}
+
+#cloud {
+    z-index: 0;
+    height: 7.0em;
+    display: block;
+    margin-left: ;
+    margin-right: ;
+-webkit-animation-duration: 5s;
+-webkit-animation-delay: 0s;
+-webkit-animation-iteration-count: 1;
+    animation-name: fadeInLeftBig ;
+       
+}
+
+#cloud1 {
+    z-index: 1;
+    height: 7.0em;
+    margin-top: 00px;
+    display: block;
+    margin-left: ;
+    margin-right: ;
+-webkit-animation-duration: 5s;
+-webkit-animation-delay: 0s;
+-webkit-animation-iteration-count: 1;
+    animation-name: fadeInRightBig ;
+    
+}
+
+#cloud2 {
+    z-index: 1;
+    height: 3.0em;
+    margin: -60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+-webkit-animation-duration: 3s;
+-webkit-animation-delay: 0s;
+-webkit-animation-iteration-count: infinite;
+/*    animation-name: fadeInLeftBig ;*/
+    
+}
+
+#cloud3 {
+    z-index: 1;
+    height: 5.0em;
+    margin-left: 40px;
+    display: block;
+    margin-left: ;
+    margin-right:;
+    margin-top: 25px;
+-webkit-animation-duration: 3s;
+-webkit-animation-delay: 0s;
+-webkit-animation-iteration-count: infinite;
+/*    animation-name: slideInLeft ;*/
+    
+}
+
+
+#cloud4 {
+    z-index: 1;
+    height: 4.0em;
+    margin-left: px;
+    display: block;
+    margin-left: ;
+    margin-right:;
+    margin-top: -40px;
+-webkit-animation-duration: 6s;
+-webkit-animation-delay: 0s;
+-webkit-animation-iteration-count: 1;
+    animation-name: fadeInLeftBig ;
+    
+}
+
+
+
+#treeHouse {
+    z-index: 1;
+    height: 23.0em;
+    margin-top: 120px;
+    display: block;
+    margin-left: ;
+    margin-right: auto;
+-webkit-animation-duration: 3s;
+-webkit-animation-delay: 2s;
+-webkit-animation-iteration-count: infinite;
+/*    animation-name: slideInLeft ;*/
+    
+}
+
+#bush {
+    z-index: 1;
+    height: 3.0em;
+    margin-top: 440px;
+    display: block;
+    margin-left: 20px;
+    margin-right: ;
+-webkit-animation-duration: 7s;
+-webkit-animation-delay: 2s;
+-webkit-animation-iteration-count: infinite;
+/*    animation-name: slideInLeft ;*/
+    
+}
+
+#tree1{
+    z-index: 2;
+    height: 4.0em;
+    margin-top: 350px;
+    display: block;
+    margin-left: 220px;
+    margin-right: ;
+-webkit-animation-duration: 10s;
+-webkit-animation-delay: ;
+-webkit-animation-iteration-count: infinite;
+/*    animation-name: wiggle ;*/
+    
+}
+
+#books{
+    display:none;
+}
+
+#libraryIcon{
+    display:none;
+}
+    
+#header{
+    color:#A64Ac9;
+    font-size: 55px;
+    margin-right: 30px;
+    text-align: center;
+    z-index: 2;
+/*    height: 14.0em;*/
+    margin-top: 0px;
+    display: block;
+    margin-left: 0px;
+    margin-right: ;
+-webkit-animation-duration: 9s;
+-webkit-animation-delay: ;
+-webkit-animation-iteration-count: 1;
+    animation-name: zoomInDown ;
+    
+}
+
+/*
+Landing Animation End
+*********************************************************
+
+Side Nav Start
+*********************************************************
+*/
+
+/* Style the links inside the sidenav */
+#mySidenav a {
+    z-index: 100;
+    position: absolute; /* Position them relative to the browser window */
+    left: -160px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 10px; /* 15px padding */
+    width: 250px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 30px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 0 15px 15px 0; /* Rounded corners on the top right and bottom right side */
+    
+}
+
+#mySidenav a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#home {
+    top: 20px;
+    background-color: #4CAF50;
+    height: 100px;
+    text-align: center;
+    line-height: 80px;
+}
+
+#myBooks {
+    top: 180px;
+    background-color: #2196F3; /* Blue */
+    height: 100px;
+    text-align: center;
+    line-height: 80px;
+}
+
+#library {
+    top: 340px;
+    background-color: #f44336; /* Red */
+    height: 100px;
+    text-align: center;
+    line-height: 80px;
+}
+
+#user {
+    top: 500px;
+    background-color: #A64Ac9; /* Light Black */
+    height: 100px;
+    text-align: center;
+    line-height: 80px;
+}
+
+
+/*
+Side Nav End
+*********************************************************
+Swiper Start
+*********************************************************
+*/
+
+/* adjusts the carousel on library and book pages */
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* adjusts the carousel on library and book pages */
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+/* adjusts buttons on library page, which are the next two listed */
+.library-buttons {
+    justify-content: center;
+}
+
+.get-book-button {
+    margin-right: 10px;
+    background-color: #A64Ac9;
+    color: #F5E6CC;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.get-book-button:hover {
+    background-color: #F5E6CC;
+    color: #A64Ac9;
+}
+
+.wishlist-button {
+    margin-left: 10px;
+    background-color: #A64Ac9;
+    color: #F5E6CC;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.wishlist-button:hover {
+    background-color: #F5E6CC;
+    color: #A64Ac9;
+}
+
+/* users uploaded info on their homepage */
+.user-info {
+    margin-top: 20px;
+}
+
+/* list of books the user has competed */
+.books-read {
+    list-style-type: none;
+}
+
+/*
+Swiper End
+*********************************************************
+*/
+   
+/*
+End Media Query 640
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    
+*/
+
 
 
 
