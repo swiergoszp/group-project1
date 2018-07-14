@@ -16,7 +16,8 @@ main {
 }
 
 #mainLinks {
-    padding-top: 80px;   
+    padding-top: 20px;
+    justify-content: space-around;
 }
 
 /*
@@ -29,7 +30,7 @@ Landing Animation Start
 #path {
     z-index:0;
     height: 350px;
-    margin-top: 180px;
+    /* margin-top: 180px; */
     margin-left: -150px;
     display: block;
 -webkit-animation-duration: 9s;
@@ -115,7 +116,7 @@ Landing Animation Start
 #treeHouse {
     z-index: 1;
     height: 30.0em;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     display: block;
     margin-left: ;
     margin-right: auto;
@@ -143,9 +144,9 @@ Landing Animation Start
 #tree1{
     z-index: 2;
     height: 10.0em;
-    margin-top: 350px;
+    margin-top: 250px;
     display: block;
-    margin-left: 220px;
+    /* margin-left: 220px; */
     margin-right: ;
 -webkit-animation-duration: 10s;
 -webkit-animation-delay: ;
@@ -155,8 +156,8 @@ Landing Animation Start
 }
 
 #books{
-    postion: fixed;
-    margin-left: 80px;
+    /* postion: fixed; */
+    /* margin-left: 80px; */
     text-align: center;
     z-index: 2;
     height: 10.0em;
@@ -172,8 +173,8 @@ Landing Animation Start
 }
 
 #libraryIcon{
-    position: absolute;
-    margin-right: 30px;
+    /* position: absolute; */
+    /* margin-right: 30px; */
     text-align: center;
     z-index: 2;
     height: 14.0em;

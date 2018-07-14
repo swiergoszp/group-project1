@@ -1,0 +1,33 @@
+body {
+	background-color: blue;
+}
+
+/* #Caterpillar {
+	width: 1152px;
+	height: 400px;
+} */
+
+#Caterpillar .turn-page {
+	background-color: whitesmoke;
+	background-size: 100% 100%;
+}
+
+#cover {
+	background-color: tan;
+}
+
+.flipbook {
+	width: 1100px;
+	height: 500px;
+}
+
+.flipbook .page {
+	width: 1000px;
+	height: 450px;
+}
+
+#cover {
+	background-image: url("images/TitlePage.JPG");
+}
+
+
