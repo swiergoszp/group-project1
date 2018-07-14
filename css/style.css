@@ -1,8 +1,7 @@
 /* container that holds all content and sets size of page so content can be centered */
 main {
     background:linear-gradient(#FCCD04 , #FFB48F , #F5E6CC );
-    height: 100vh;
-    padding-bottom: 200px;
+    height: 130vh;
     font-family: 'Love Ya Like A Sister', cursive;
 /*    font-family: 'Shadows Into Light', cursive;*/
     font-weight: bolder;
@@ -329,10 +328,6 @@ Swiper Start
 /* list of books the user has competed */
 .books-read {
     list-style-type: none;
-}
-
-.container {
-    height: 100vh;
 }
 
 /*
