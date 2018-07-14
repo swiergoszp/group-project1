@@ -10,7 +10,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <!-- Swiper -->
-    <link rel="stylesheet" href="assets/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="swiper/dist/css/swiper.min.css">
     <!-- custom font -->
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
     <!-- CSS -->
@@ -24,21 +24,13 @@
     
 <main>
 
-    <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link" href="index.html">Home</a>
-                <a class="nav-item nav-link" href="user.html">My Page</a>
-                <a class="nav-item nav-link active" href="book.html">My Books <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="library.html">Our Library</a>
-                <button class="log-out">Log-Out</button>
-            </div>
-        </div>
-    </nav>
+    <!--Nav Bar-->
+    <div id="mySidenav" class="sidenav">
+        <a href="index.html" id="home">Home<img src="assets/images/home.png" height="70px" align="right"></a>
+        <a href="book.html" id="myBooks">My Books<img src="assets/images/books3.png" height="78px" align="right"></a>
+        <a href="library.html" id="library">Library<img src="assets/images/library.png" height="80px" align="right"></a>
+        <a href="user.html" id="user">User<img src="assets/images/user.png" height="78px" align="right"></a>
+    </div>
 
     <h1 class="header">Our Library</h1>
 
@@ -63,7 +55,7 @@
 </main>
 
 <!-- Swiper JS -->
-<script src="assets/swiper/dist/js/swiper.min.js"></script>
+<script src="swiper/dist/js/swiper.min.js"></script>
 
 <!-- Initialize Swiper -->
 <script>
@@ -85,7 +77,6 @@
     });
 </script>
 
-<!-- Swiper -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
