@@ -1,14 +1,13 @@
 /* container that holds all content and sets size of page so content can be centered */
 main {
     background:linear-gradient(#FCCD04 , #FFB48F , #F5E6CC );
-    height: 110vh;
+    height: 130vh;
     font-family: 'Love Ya Like A Sister', cursive;
 /*    font-family: 'Shadows Into Light', cursive;*/
     font-weight: bolder;
 }
 
 /* displays title on main page */
-
 .header {
     padding-top: 20px;
     text-align: center;
@@ -16,12 +15,9 @@ main {
     font-size: 400%;
 }
 
-
-
-
 #mainLinks {
-    padding-top: 80px;
-        
+    padding-top: 20px;
+    justify-content: space-around;
 }
 
 /*
@@ -148,7 +144,7 @@ Landing Animation Start
 #tree1{
     z-index: 2;
     height: 10.0em;
-    margin-top: 350px;
+    margin-top: 250px;
     display: block;
     margin-left: 220px;
     margin-right: ;
@@ -160,7 +156,7 @@ Landing Animation Start
 }
 
 #books{
-    postion: fixed;
+    /* postion: fixed; */
     margin-left: 80px;
     text-align: center;
     z-index: 2;
@@ -177,7 +173,7 @@ Landing Animation Start
 }
 
 #libraryIcon{
-    position: absolute;
+    /* position: absolute; */
     margin-right: 30px;
     text-align: center;
     z-index: 2;
@@ -328,6 +324,7 @@ Swiper Start
 /* users uploaded info on their homepage */
 .user-info {
     margin-top: 20px;
+    color: #A64Ac9;
 }
 
 /* list of books the user has competed */
