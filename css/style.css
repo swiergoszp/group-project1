@@ -1,14 +1,14 @@
 /* container that holds all content and sets size of page so content can be centered */
 main {
     background:linear-gradient(#FCCD04 , #FFB48F , #F5E6CC );
-    height: 110vh;
+    height: 100vh;
+    padding-bottom: 200px;
     font-family: 'Love Ya Like A Sister', cursive;
 /*    font-family: 'Shadows Into Light', cursive;*/
     font-weight: bolder;
 }
 
 /* displays title on main page */
-
 .header {
     padding-top: 20px;
     text-align: center;
@@ -16,12 +16,8 @@ main {
     font-size: 400%;
 }
 
-
-
-
 #mainLinks {
-    padding-top: 80px;
-        
+    padding-top: 80px;   
 }
 
 /*
@@ -333,6 +329,10 @@ Swiper Start
 /* list of books the user has competed */
 .books-read {
     list-style-type: none;
+}
+
+.container {
+    height: 100vh;
 }
 
 /*
