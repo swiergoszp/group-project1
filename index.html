@@ -5,70 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Story Time</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <!-- custom font -->
+    <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <!-- images used in navigation -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/css/mdb.min.css" />
+    <link rel="stylesheet" href="css/wickedcss.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="javascript/main.js"></script>
 </head>
 <body>
 
 <main>
+  
+<div class="container">
+    
 
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="user.html">My Page</a>
-                <a class="nav-item nav-link" href="book.html">My Books</a>
-                <a class="nav-item nav-link" href="library.html">Our Library</a>
-                <button class="log-out">Log-Out</button>
-            </div>
+    
+    <!--Header-->
+
+    <div class="row">
+        <div class="col-12">
+            <span id="header">Kids Reads</span>
         </div>
-    </nav>
+    </div>
 
+
+    <!--Nav Bar-->
+    <div id="mySidenav" class="sidenav">
+    <a href="index.html" id="home">Home<img src="assets/images/home.png" height="70px" align="right"></a>
+    <a href="book.html" id="myBooks">My Books<img src="assets/images/books3.png" height="78px" align="right"></a>
+    <a href="library.html" id="library">Library<img src="assets/images/library.png" height="80px" align="right"></a>
+    <a href="user.html" id="user">User<img src="assets/images/user.png" height="78px" align="right"></a>
+    </div>
+
+
+
+
+    <!--Images-->
     <div class="container">
-
-        <h1 class="header">Story Time</h1>
-
-        <div class="nav-area row">
-            <!-- clickable images for site navigation here -->
-            <div class="col-sm nav-pics">
-                <a href="user.html"><i class="fas fa-users fa-7x"></i></a>
-                <br>
-                <br>
-                <p class="nav-words">My Page</p>
-            </div>
-            <div class="col-sm nav-pics">
-                <a href="book.html"><i class="fas fa-book fa-7x"></i></a>
-                <br>            
-                <br>            
-                <p class="nav-words">My Books</p>
-            </div>
-            <div class="col-sm nav-pics">
-                <a href="library.html"><i class="fas fa-store-alt fa-7x"></i></a>
-                <br>
-                <br>
-                <p class="nav-words">Our Library</p>
-            </div>
+    <div class="row">
+        <div class="col-7">
+        <img src="assets/images/cloud2.png" id="cloud" class="">
+        <img src="assets/images/cloud2.png" id="cloud2" class="wiggle">
         </div>
+        
+        <div class="col-1">
+        <img src="assets/images/cloud2.png" id="cloud1">
+    <!--      <img src="assets/images/cloud2.png" id="cloud2">-->
+        </div>
+        
+        <div class="col-2">
+        <img src="assets/images/cloud2.png" id="cloud3" class="wiggle">
+        <img src="assets/images/cloud2.png" id="cloud4" class="">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-5">
+        <img src="assets/images/treeHouse1.png" id="treeHouse"  class="">
+        </div>
+        <div class="col-1">
+        <img src="assets/images/path.png" id="path"  class="">
+        </div>
+        <div class="col-1">
+        <img src="assets/images/plant1.png" id="tree1"  class="">
+        </div>
+        
+    <!--Main Input-->
+    <div class="row" id="mainLinks">
+        <div class="col-sm">
+            <a href="book.html" id="books"><img src="assets/images/books3.png" height="150" align="" >My Books</a>
+        </div>
+        <div class="col-sm">
+            
+        </div>
+        <div class="col-sm">
+            <a href="library.html" id="libraryIcon"><img src="assets/images/library.png" height="150px" align="center">&nbsp;Library</a>
+        </div>
+    </div>
 
     </div>
 
-    <footer></footer>
+</div>
 
 </main>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
 
 </body>
 </html>
