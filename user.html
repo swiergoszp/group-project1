@@ -20,57 +20,49 @@
 </head>
 <body>
 
-<main>
-    
-    <!--Header-->
-
-    <div class="row">
-        <div class="col-12">
-            <span class="header1">MY Page</span>
-        </div>
-    </div>
-
-    <!--Nav Bar-->
-<div id="mySidenav" class="sidenav">
-    <a href="index.html" id="home">Home<img src="assets/images/home.png" height="70px" align="right"></a>
-    <a href="book.html" id="myBooks">My Books<img src="assets/images/books3.png" height="78px" align="right"></a>
-    <a href="library.html" id="library">Library<img src="assets/images/library.png" height="80px" align="right"></a>
-    <a href="user.html" id="user">User<img src="assets/images/user.png" height="78px" align="right"></a>
-</div>
-
-    <div class="container">
-
-      
-        <div class="row user-info">
-            <div class="user-image col-lg-3">
-                <img src="assets/images/lilli.png" alt="a picture of you">
-            </div>
-    
-            <div class="profile-info col-lg-9 h4">
-                <p class="name" id="child-name"></p><br>
-                <p class="age" id="child-age"></p><br>
-                <p class="books" id="books-list"></p><br>
-            </div>
-        </div>
-
+    <main>
+        <!--Header-->
         <div class="row">
-            <div>
-                <ul class="books-read">
-                    <li></li>
-                </ul>
+            <div class="col-12">
+                <span class="header1" id="page-header">My Page</span>
             </div>
         </div>
 
-    </div>
+        <!--Nav Bar-->
+        <div id="mySidenav" class="sidenav">
+            <a href="index.html" id="home">Home<img src="assets/images/home.png" height="70px" align="right"></a>
+            <a href="book.html" id="myBooks">My Books<img src="assets/images/books3.png" height="78px" align="right"></a>
+            <a href="library.html" id="library">Library<img src="assets/images/library.png" height="80px" align="right"></a>
+            <a href="user.html" id="user">User<img src="assets/images/user.png" height="78px" align="right"></a>
+        </div>
 
-</main>
+        <div class="container">
+            <div class="row user-info">
+                <div class="user-image col-lg-3" id="user-img">
+                    <div class="align-right pl-4"><img src="assets/images/lilli.png" alt="a picture of you"></div>
+                </div>
+        
+                <div class="profile-info col-lg-9 h3">
+                    <p class="name" id="child-name"></p><br>
+                    <p class="age" id="child-age"></p><br>
+                    <p class="books">These are your books!</p><br>
+                    <div class="row">
+                        <div class="border border-primary rounded">
+                            <ul class="books-read p-3" id="books-list">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
 </body>
 </html>
