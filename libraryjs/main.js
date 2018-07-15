@@ -135,13 +135,13 @@ $('#nex').click(function(){
 });
 
 
-$(".read-button").on("click" , function() {
+$("#read-button").on("click" , function() {
     $(".swiper-container").css("display", "none")  
     $("#firstBook").css("display", "block")
-    $(".read-button").css("display", "none")
+    $("#read-button").css("display", "none")
 });
 $("#closeBook").on("click", function(){
-    $(".read-button").css("display", "block");
+    $("#read-button").css("display", "block");
     $(".swiper-container").css("display", "block");
     $("#firstBook").fadeOut("slow")
 
