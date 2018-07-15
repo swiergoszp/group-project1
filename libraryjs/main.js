@@ -148,11 +148,14 @@ $('#prev').click(function(){
 //***************************************************************/
 $('#nex').click(function(){
 //***************************************************************/
-
-    $('#restart').click( function(){
-        $('#Caterpillar').turn('page', 1)
+$('#Caterpillar').turn('next');
+    
 })
-
+$('#restart').click( function(){
+ //***************************************************************/
+   
+    $('#Caterpillar').turn('page', 1)
+})
 //***************************************************************/
 $("#read-button").on("click" , function() {
 //***************************************************************/
@@ -206,11 +209,7 @@ var pg46 = document.getElementById("pga46")
 $("#Caterpillar").bind("turning", function(event, page) {
 //***************************************************************/
 
-// if (page == 1){
-//     music.pause()
-// }
 if(page == 2) {
-    // music.play()
     titleAudio.play()
 }
 if (page == 4){
