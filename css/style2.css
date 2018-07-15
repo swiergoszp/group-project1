@@ -1,9 +1,7 @@
 
-
-/* #Caterpillar {
-	width: 1152px;
-	height: 400px;
-} */
+#Caterpillar {
+    font-family: 'Gaegu';
+}
 
 #Caterpillar .turn-page {
 	background-color: whitesmoke;
@@ -24,15 +22,8 @@
 	height: 450px;
 }
 
-#cover {
-	background-image: url("images/TitlePage.JPG");
-}
 #firstBook{
 	border-style: solid;
 	border-width: 5px;
 	border-color: brown;
-	background-image: url("images/bg.jpg")
 }
-
-
-
