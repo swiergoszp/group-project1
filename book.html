@@ -10,20 +10,26 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <!-- Swiper -->
-    <link rel="stylesheet" href="swiper/dist/css/swiper.min.css">
+    <!-- <link rel="stylesheet" href="swiper/dist/css/swiper.min.css"> -->
     <!-- custom font -->
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style2.css" />
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.270.1.min.js"></script>
     <!-- custom images from FontAwesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <!-- JS -->
-    <script src="javascript/main.js"></script>
-</head>
-<body>
+    <!-- <script src="javascript/main.js"></script> -->
     
-<main>
 
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+</head>
+
+<body>
+<main>
+    
     <!--Nav Bar-->
     <div id="mySidenav" class="sidenav">
         <a href="index.html" id="home">Home<img src="assets/images/home.png" height="70px" align="right"></a>
@@ -44,12 +50,90 @@
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
     </div>
-    
-    <!-- Swiper JS -->
-    <script src="swiper/dist/js/swiper.min.js"></script>
+    <div class="row library-buttons">
+            <button class="read-button">Read!</button>
+    </div>
 
-    <!-- Initialize Swiper -->
-    <script>
+    <div class="container" id="firstBook" style="background-image: url('images/bg.jpg'); display: none">
+        <div class="row">
+            <div class="col-md-12">
+                    <div id="Caterpillar" class="flipbook">
+                            <div class="hard" id="cover" style="background-image: url('images/TitlePage.JPG')"></div>
+                            <div class="hard" id="insideCover"><img src="images/insidecover.JPG" style="width: 300px"></div>
+                            <div class="page" id="title"><h1>The Very Hungry Caterpillar</h1><br/>
+                                <h2>By Eric Carle</h2>
+                            </div>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <button class="btn btn-large btn-success" id="prev"><span class="fa fa-arrow-circle-left"></span>Previous</button>
+                <button class="btn btn-large btn-success" id="nex">Next<span class="fa fa-arrow-circle-right"></span></button>
+            </div>
+        </div> 
+    </div>
+    
+    <audio id="titlePage" src="audio/TITLE.mp3" preload="auto">
+    </audio>
+    <audio id="music" src="audio/music.mp3" preload="auto" loop="loop">
+    </audio>
+    <audio id="pga2" src="audio/pg2.mp3" preload="auto">
+    </audio>
+    <audio id="pga4" src="audio/pg4.mp3" preload="auto">
+    </audio>
+    <audio id="pga6" src="audio/pg6.mp3" preload="auto">
+    </audio>
+    <audio id="pga8" src="audio/pg8.mp3" preload="auto">
+    </audio>
+    <audio id="pga10" src="audio/pg10.mp3" preload="auto">
+    </audio>
+    <audio id="pga12" src="audio/pg12.mp3" preload="auto">
+    </audio>
+    <audio id="pga14" src="audio/pg14.mp3" preload="auto">
+    </audio>
+    <audio id="pga16" src="audio/pg16.mp3" preload="auto">
+    </audio>
+    <audio id="pga18" src="audio/pg18.mp3" preload="auto">
+    </audio>
+    <audio id="pga20" src="audio/pg20.mp3" preload="auto">
+    </audio>
+    <audio id="pga22" src="audio/pg22.mp3" preload="auto">
+    </audio>
+    <audio id="pga24" src="audio/pg24.mp3" preload="auto">
+    </audio>
+    <audio id="pga26" src="audio/pg26.mp3" preload="auto">
+    </audio>
+    <audio id="pga28" src="audio/pg28.mp3" preload="auto">
+    </audio>
+    <audio id="pga30" src="audio/pg30.mp3" preload="auto">
+    </audio>
+    <audio id="pga32" src="audio/pg32.mp3" preload="auto">
+    </audio>
+    <audio id="pga34" src="audio/pg34.mp3" preload="auto">
+    </audio>
+    <audio id="pga36" src="audio/pg36.mp3" preload="auto">
+    </audio>
+    <audio id="pga38" src="audio/pg38.mp3" preload="auto">
+    </audio>
+    <audio id="pga40" src="audio/pg40.mp3" preload="auto">
+    </audio>
+    <audio id="pga42" src="audio/pg42.mp3" preload="auto">
+    </audio>
+    <audio id="pga44" src="audio/pg44.mp3" preload="auto">
+    </audio>
+    <audio id="pga46" src="audio/pg46.mp3" preload="auto">
+    </audio>
+    <!-- Swiper JS -->
+    
+    <!-- <script src="swiper/dist/js/swiper.min.js"></script> -->
+    
+
+   
+    <!-- <script>
+       
+
         var swiper = new Swiper('.swiper-container', {
         effect: 'coverflow',
         grabCursor: true,
@@ -66,13 +150,13 @@
             el: '.swiper-pagination',
         },
         });
-    </script>
+    </script> -->
 
 </main>
-
+<script src="libraryjs/main.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
+<script src="libraryjs/turn1.js" type="text/javascript"></script>
 </body>
 </html>

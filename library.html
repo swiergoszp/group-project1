@@ -15,14 +15,11 @@
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/style2.css" />
     <!-- custom images from FontAwesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <!-- JS -->
     <script src="javascript/main.js"></script>
-    <script src="libraryjs/main.js"></script>
-    <script src="libraryjs/turn1.js"></script>
-
+    
 </head>
 <body>
     
@@ -39,7 +36,7 @@
     <h1 class="header">Our Library</h1>
 
     <!-- Swiper -->
-    <div class="swiper-container" style="display: block">
+    <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide" value="Dont Let the Pigeon Drive the Bus" style="background-image:url(assets/images/pigeon.jpg)"></div>
             <div class="swiper-slide" value="If You Give A Mouse A Cookie" style="background-image:url(assets/images/mouse.jpg)"></div>
@@ -51,25 +48,7 @@
         <div class="swiper-pagination"></div>
     </div>
 
-    <div class="container" id="firstBook" style="background-image: url('images/bg.jpg')" style="display: none">
-        <div class="row">
-            <div class="col-md-12">
-                    <div id="Caterpillar" class="flipbook">
-                            <div class="hard" id="cover" style="background-image: url('images/TitlePage.JPG')"></div>
-                            <div class="hard" id="insideCover"><img src="images/insidecover.JPG" style="width: 300px"></div>
-                            <div class="page" id="title"><h1>The Very Hungry Caterpillar</h1><br/>
-                            <h2>By Eric Carle</h2></div>
-                        </div>
-                    </div>
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-                <button class="btn btn-large btn-success" id="prev"><span class="fa fa-arrow-circle-left"></span>Previous</button>
-                <button class="btn btn-large btn-success" id="nex">Next<span class="fa fa-arrow-circle-right"></span></button>
-            </div>
-        </div> 
-        </div>
-    </div>
+    
 
     <div class="row library-buttons">
         <button class="get-book-button">Add to My Books</button>
@@ -83,10 +62,7 @@
 
 <!-- Initialize Swiper -->
 <script>
-    $("#thisBook").on("click", function(){
-        $(".swiper-container").css("display", "none");
-        $("#firstBook").css("display", "block")
-    })
+    
 
     var swiper = new Swiper('.swiper-container', {
         effect: 'coverflow',
@@ -105,12 +81,10 @@
             },
     });
 </script>
-<script src="libraryjs/turn1.js" type="text/javascript"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-<script src="libraryjs/main.js" type="text/javascript"></script>
 
 </body>
 </html>

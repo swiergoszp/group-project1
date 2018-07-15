@@ -23,7 +23,7 @@ var TheLibrary = {
 //***************************************************************/
 $(document).ready(function() {
 //***************************************************************/
-    
+
         var arrWords = [];
     
             TheLibrary.InitializeFirestore();
@@ -60,7 +60,7 @@ $(document).ready(function() {
                                 page = (id * 2)
                                 tagText += '<p>Page ' + page.toString() + '</p><p>'
 
-                                arrWords = item.split(',');
+                                arrWords = item.split(' ');
                                 console.log(item)
                                 arrWords.forEach(function(word) {
                                     console.log(word)
@@ -148,46 +148,50 @@ $('#prev').click(function(){
 });
 $('#nex').click(function(){
     $('#Caterpillar').turn('next');
+    
 });
 
-var music = document.getElementById("music")
-music.volume = 0.05;
-var titleAudio = document.getElementById("titlePage")
-var pg2 = document.getElementById("pga2")
-var pg4 = document.getElementById("pga4")
-var pg6 = document.getElementById("pga6")
-var pg8 = document.getElementById("pga8")
-var pg10 = document.getElementById("pga10")
-    pg10.volume = 1;
-var pg12 = document.getElementById("pga12")
-var pg14 = document.getElementById("pga14")
-var pg16 = document.getElementById("pga16")
-var pg18 = document.getElementById("pga18")
-var pg20 = document.getElementById("pga20")
-var pg22 = document.getElementById("pga22")
-var pg24 = document.getElementById("pga24")
-var pg26 = document.getElementById("pga26")
-var pg28 = document.getElementById("pga28");
-var pg30 = document.getElementById("pga30")
-var pg32 = document.getElementById("pga32")
-var pg34 = document.getElementById("pga34")
-var pg36 = document.getElementById("pga36")
-var pg38 = document.getElementById("pga38")
-var pg40 = document.getElementById("pga40")
-var pg42 = document.getElementById("pga42")
-var pg44 = document.getElementById("pga44")
-var pg46 = document.getElementById("pga46")
-var myAudio = document.getElementById("testAudio");
-var audio2 = document.getElementById("testAudio2")
 
 
-$("#test").on("click", function(){
-      pg2.play();
-      console.log("Value")
-})
-var pg1Playing = false;
+
+$(".read-button").on("click" , function() {
+    $(".swiper-container").css("display", "none")  
+    $("#firstBook").css("display", "block")
+
+});
+
 
 $("#Caterpillar").bind("turning", function(event, page) {
+
+    var music = document.getElementById("music")
+    music.volume = 0.05;
+    var titleAudio = document.getElementById("titlePage")
+    var pg2 = document.getElementById("pga2")
+    var pg4 = document.getElementById("pga4")
+    var pg6 = document.getElementById("pga6")
+    var pg8 = document.getElementById("pga8")
+    var pg10 = document.getElementById("pga10")
+        pg10.volume = 1;
+    var pg12 = document.getElementById("pga12")
+    var pg14 = document.getElementById("pga14")
+    var pg16 = document.getElementById("pga16")
+    var pg18 = document.getElementById("pga18")
+    var pg20 = document.getElementById("pga20")
+    var pg22 = document.getElementById("pga22")
+    var pg24 = document.getElementById("pga24")
+    var pg26 = document.getElementById("pga26")
+    var pg28 = document.getElementById("pga28");
+    var pg30 = document.getElementById("pga30")
+    var pg32 = document.getElementById("pga32")
+    var pg34 = document.getElementById("pga34")
+    var pg36 = document.getElementById("pga36")
+    var pg38 = document.getElementById("pga38")
+    var pg40 = document.getElementById("pga40")
+    var pg42 = document.getElementById("pga42")
+    var pg44 = document.getElementById("pga44")
+    var pg46 = document.getElementById("pga46")
+
+
 if (page == 1){
     music.pause()
 }
