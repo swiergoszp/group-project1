@@ -19,14 +19,26 @@
         <title>The Very Hungry Caterpillar</title>
 </head>
 <body>
-    <div id="Caterpillar" class="flipbook align-content-center">
-        <div class="hard" style="background-image: url('images/TitlePage.JPG')" id="cover"></div>
-        <div class="hard" id="insideCover"><img src="images/insidecover.JPG" style="width: 300px"></div>
-        <div class="page" id="title"><h1>The Very Hungry Caterpillar</h1><br/>
-        <h2>By Eric Carle</h2></div>
-        <!-- remaining is dynamically populated-->
-    </div>
-    <!-- <button class="btn btn-dark btn-lg" id="test">Test</button> -->
+
+        <div class="container" id="firstBook" style="background-image: url('images/bg.jpg')">
+                <div class="row">
+                    <div class="col-md-12">
+                            <div id="Caterpillar" class="flipbook">
+                                    <div class="hard" id="cover" style="background-image: url('images/TitlePage.JPG')"></div>
+                                    <div class="hard" id="insideCover"><img src="images/insidecover.JPG" style="width: 300px"></div>
+                                    <div class="page" id="title"><h1>The Very Hungry Caterpillar</h1><br/>
+                                    <h2>By Eric Carle</h2></div>
+                                </div>
+                            </div>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <button class="btn btn-large btn-success" id="prev"><span class="fa fa-arrow-circle-left"></span>Previous</button>
+                        <button class="btn btn-large btn-success" id="nex">Next<span class="fa fa-arrow-circle-right"></span></button>
+                    </div>
+                </div> 
+                </div>
+            </div>
 
     <audio id="titlePage" src="audio/TITLE.mp3" preload="auto">
     </audio>
