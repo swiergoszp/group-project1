@@ -1,11 +1,11 @@
 body {
 	background-color: blue;
+
 }
 
-/* #Caterpillar {
-	width: 1152px;
-	height: 400px;
-} */
+#Caterpillar {
+    font-family: 'Gaegu';
+}
 
 #Caterpillar .turn-page {
 	background-color: whitesmoke;
@@ -25,9 +25,4 @@ body {
 	width: 1000px;
 	height: 450px;
 }
-
-#cover {
-	background-image: url("images/TitlePage.JPG");
-}
-
 
