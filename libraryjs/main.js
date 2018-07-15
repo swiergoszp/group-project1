@@ -32,55 +32,40 @@ $(document).ready(function() {
 
             docRef.get().then(function(doc) {
                 if (doc.exists) {
-                    console.log("Document data:", doc.data());
                 
                     var pages = doc.data().BookPages,
                         pgCounter = 1,
                         tagText = '',
                         tagStyle,
-                        tag,
                         element,
                         page;
 
                     pages.forEach(function(item, id) {
-                        console.log("id = " + id)
-                        console.log("item = " + item)
                         if (id > 0) {
 
-                                tagText = '';
-                                tagText += '<p>Page ' + pgCounter.toString() + '</p>'
-
                                 tagStyle = '<div style="background-image: url(' + "'images/pg" + pgCounter.toString() + ".JPG')" + '" />'
-                                console.log(tagStyle)
-                                element = $(tagStyle).html(tagText);
-                                console.log(element)
+                                element = $(tagStyle);
                                 $("#Caterpillar").turn("addPage", element, pgCounter+3)
 
                                 tagText = '';
                                 page = (id * 2)
-                                tagText += '<p>Page ' + page.toString() + '</p><p>'
+                                tagText += '<p style="font-size:24px !important;padding:15px;text-align:center;">Page ' + page.toString() + '</p><p>'
 
                                 arrWords = item.split(' ');
-                                console.log(item)
+
                                 arrWords.forEach(function(word) {
-                                    console.log(word)
-                                    tagText += '<a href="#" class="wordLink" text="'+word+'">';
+                                    tagText += '<a style="font-size:48px !important;padding:15px;" href="#" class="wordLink" text="'+word+'">';
                                     tagText += word + '</a> '
                                 });
 
                                 tagText +='</p>'
-
                                 pgCounter += 2;
-                                console.log("page = " + pgCounter)
                         }
-                        element = $("<div />").html(tagText);
+                        element = $('<div class="text-center"/>').html(tagText);
                         $("#Caterpillar").turn("addPage", element, page+3)
                     })
-
-                    console.log(tagText)
                 } else {
                     // doc.data() will be undefined in this case
-                    console.log("No such document!");
                 }
             }).catch(function(error) {
                 console.log("Error getting document:", error);
@@ -89,8 +74,7 @@ $(document).ready(function() {
     
     $(document).on('click', 'a', function(e) {
         e.preventDefault(); 
-    
-        
+
         var word = $(this).attr("text");
     
         AWS.config.region = 'us-west-1';
@@ -123,7 +107,6 @@ $(document).ready(function() {
 
 
 $(window).ready(function() {
-    console.log("onWindow")
     $('#Caterpillar').turn({
         display: 'double',
         acceleration: true,
@@ -152,14 +135,11 @@ $('#nex').click(function(){
 });
 
 
-
-
 $(".read-button").on("click" , function() {
     $(".swiper-container").css("display", "none")  
     $("#firstBook").css("display", "block")
 
 });
-
 
 $("#Caterpillar").bind("turning", function(event, page) {
 
