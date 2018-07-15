@@ -43,8 +43,8 @@ Landing Animation Start
     z-index: 0;
     height: 8.0em;
     display: block;
-    margin-left: ;
-    margin-right: ;
+    margin-left: 0px;
+    margin-right: 0px;
 -webkit-animation-duration: 5s;
 -webkit-animation-delay: 0s;
 -webkit-animation-iteration-count: 1;
@@ -57,8 +57,8 @@ Landing Animation Start
     height: 9.0em;
     margin-top: 00px;
     display: block;
-    margin-left: ;
-    margin-right: ;
+    margin-left: 0px;
+    margin-right: 0px;
 -webkit-animation-duration: 5s;
 -webkit-animation-delay: 0s;
 -webkit-animation-iteration-count: 1;
@@ -85,8 +85,8 @@ Landing Animation Start
     height: 7.0em;
     margin-left: 40px;
     display: block;
-    margin-left: ;
-    margin-right:;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-top: 25px;
 -webkit-animation-duration: 3s;
 -webkit-animation-delay: 0s;
@@ -99,10 +99,10 @@ Landing Animation Start
 #cloud4 {
     z-index: 1;
     height: 6.0em;
-    margin-left: px;
+    margin-left: 0px;
     display: block;
-    margin-left: ;
-    margin-right:;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-top: -40px;
 -webkit-animation-duration: 6s;
 -webkit-animation-delay: 0s;
@@ -118,7 +118,7 @@ Landing Animation Start
     height: 30.0em;
     margin-top: 50px;
     display: block;
-    margin-left: ;
+    margin-left: 0px;
     margin-right: auto;
 -webkit-animation-duration: 3s;
 -webkit-animation-delay: 2s;
@@ -133,7 +133,7 @@ Landing Animation Start
     margin-top: 440px;
     display: block;
     margin-left: 20px;
-    margin-right: ;
+    margin-right: 0px;
 -webkit-animation-duration: 7s;
 -webkit-animation-delay: 2s;
 -webkit-animation-iteration-count: infinite;
@@ -143,11 +143,11 @@ Landing Animation Start
 
 #tree1{
     z-index: 2;
-    height: 10.0em;
-    margin-top: 250px;
+    height: 6.0em;
+    margin-top: 300px;
     display: block;
     margin-left: 220px;
-    margin-right: ;
+    margin-right: 0px;
 -webkit-animation-duration: 10s;
 -webkit-animation-delay: ;
 -webkit-animation-iteration-count: infinite;
@@ -156,7 +156,7 @@ Landing Animation Start
 }
 
 #books{
-     postion: fixed; 
+    position: absolute; 
     margin-left: 80px;
     text-align: center;
     z-index: 2;
@@ -164,7 +164,7 @@ Landing Animation Start
     margin-top: 0px;
     display: block;
     margin-left: 0px;
-    margin-right: ;
+    margin-right: 0px;
 -webkit-animation-duration: 2s;
 -webkit-animation-delay: ;
 -webkit-animation-iteration-count: infinite;
@@ -173,15 +173,15 @@ Landing Animation Start
 }
 
 #libraryIcon{
-     position: absolute; 
+    position: absolute; 
     margin-right: 30px;
     text-align: center;
     z-index: 2;
     height: 14.0em;
     margin-top: 0px;
     display: block;
-    margin-left: 0px;
-    margin-right: ;
+    margin-left: 110px;
+    margin-right: 0px;
 -webkit-animation-duration: 2s;
 -webkit-animation-delay: ;
 -webkit-animation-iteration-count: infinite;
@@ -199,7 +199,7 @@ Landing Animation Start
     margin-top: 0px;
     display: block;
     margin-left: 0px;
-    margin-right: ;
+    margin-right: 0px;
 -webkit-animation-duration: 9s;
 -webkit-animation-delay: ;
 -webkit-animation-iteration-count: 1;
@@ -373,7 +373,7 @@ Start Media Query 1200
     
 /*
 #books{
-     postion: fixed; 
+    position: fixed; 
     margin-left: 80px;
     text-align: center;
     z-index: 2;
@@ -390,7 +390,7 @@ Start Media Query 1200
 }
 
 #libraryIcon{
-     position: absolute; 
+    position: absolute; 
     margin-right: 30px;
     text-align: center;
     z-index: 2;
@@ -448,8 +448,8 @@ Start Media Query 768
     height: 8.0em;
     margin-top: 00px;
     display: block;
-    margin-left: ;
-    margin-right: ;
+    margin-left: 0px;
+    margin-right: 0px;
 -webkit-animation-duration: 5s;
 -webkit-animation-delay: 0s;
 -webkit-animation-iteration-count: 1;
@@ -476,8 +476,8 @@ Start Media Query 768
     height: 6.0em;
     margin-left: 40px;
     display: block;
-    margin-left: ;
-    margin-right:;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-top: 25px;
 -webkit-animation-duration: 3s;
 -webkit-animation-delay: 0s;
@@ -492,8 +492,8 @@ Start Media Query 768
     height: 5.0em;
     margin-left: px;
     display: block;
-    margin-left: ;
-    margin-right:;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-top: -40px;
 -webkit-animation-duration: 6s;
 -webkit-animation-delay: 0s;
@@ -509,7 +509,7 @@ Start Media Query 768
     height: 26.0em;
     margin-top: 120px;
     display: block;
-    margin-left: ;
+    margin-left: 0px;
     margin-right: auto;
 -webkit-animation-duration: 3s;
 -webkit-animation-delay: 2s;
@@ -524,7 +524,7 @@ Start Media Query 768
     margin-top: 440px;
     display: block;
     margin-left: 20px;
-    margin-right: ;
+    margin-right: 0px;
 -webkit-animation-duration: 7s;
 -webkit-animation-delay: 2s;
 -webkit-animation-iteration-count: infinite;
@@ -534,13 +534,13 @@ Start Media Query 768
 
 #tree1{
     z-index: 2;
-    height: 6.0em;
-    margin-top: 350px;
+    height: 4.0em;
+    margin-top: 250px;
     display: block;
-    margin-left: 220px;
-    margin-right: ;
+    margin-left: 180px;
+    margin-right: 0px;
 -webkit-animation-duration: 10s;
--webkit-animation-delay: ;
+-webkit-animation-delay: 0s;
 -webkit-animation-iteration-count: infinite;
 /*    animation-name: wiggle ;*/
     
@@ -564,9 +564,9 @@ Start Media Query 768
     margin-top: 0px;
     display: block;
     margin-left: 0px;
-    margin-right: ;
+    margin-right: 0px;
 -webkit-animation-duration: 9s;
--webkit-animation-delay: ;
+-webkit-animation-delay: 0s;
 -webkit-animation-iteration-count: 1;
     animation-name: zoomInDown ;
     
@@ -736,8 +736,8 @@ Start Media Query 640
     z-index: 0;
     height: 7.0em;
     display: block;
-    margin-left: ;
-    margin-right: ;
+    margin-left: 0px;
+    margin-right: 0px;
 -webkit-animation-duration: 5s;
 -webkit-animation-delay: 0s;
 -webkit-animation-iteration-count: 1;
@@ -750,8 +750,8 @@ Start Media Query 640
     height: 7.0em;
     margin-top: 00px;
     display: block;
-    margin-left: ;
-    margin-right: ;
+    margin-left: 0px;
+    margin-right: 0px;
 -webkit-animation-duration: 5s;
 -webkit-animation-delay: 0s;
 -webkit-animation-iteration-count: 1;
@@ -778,8 +778,8 @@ Start Media Query 640
     height: 5.0em;
     margin-left: 40px;
     display: block;
-    margin-left: ;
-    margin-right:;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-top: 25px;
 -webkit-animation-duration: 3s;
 -webkit-animation-delay: 0s;
@@ -794,8 +794,8 @@ Start Media Query 640
     height: 4.0em;
     margin-left: px;
     display: block;
-    margin-left: ;
-    margin-right:;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-top: -40px;
 -webkit-animation-duration: 6s;
 -webkit-animation-delay: 0s;
@@ -811,7 +811,7 @@ Start Media Query 640
     height: 23.0em;
     margin-top: 120px;
     display: block;
-    margin-left: ;
+    margin-left: 0px;
     margin-right: auto;
 -webkit-animation-duration: 3s;
 -webkit-animation-delay: 2s;
@@ -826,7 +826,7 @@ Start Media Query 640
     margin-top: 440px;
     display: block;
     margin-left: 20px;
-    margin-right: ;
+    margin-right: 0px;
 -webkit-animation-duration: 7s;
 -webkit-animation-delay: 2s;
 -webkit-animation-iteration-count: infinite;
@@ -837,10 +837,10 @@ Start Media Query 640
 #tree1{
     z-index: 2;
     height: 4.0em;
-    margin-top: 350px;
+    margin-top: 250px;
     display: block;
-    margin-left: 220px;
-    margin-right: ;
+    margin-left: 150px;
+    margin-right: 0px;
 -webkit-animation-duration: 10s;
 -webkit-animation-delay: ;
 -webkit-animation-iteration-count: infinite;
@@ -866,9 +866,9 @@ Start Media Query 640
     margin-top: 0px;
     display: block;
     margin-left: 0px;
-    margin-right: ;
+    margin-right: 0px;
 -webkit-animation-duration: 9s;
--webkit-animation-delay: ;
+-webkit-animation-delay: 0s;
 -webkit-animation-iteration-count: 1;
     animation-name: zoomInDown ;
     
