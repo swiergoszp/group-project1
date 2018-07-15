@@ -134,8 +134,11 @@ $('#nex').click(function(){
     
 });
 
-
+$('#restart').click( function(){
+    $('#Caterpillar').turn('page', 1)
+})
 $("#read-button").on("click" , function() {
+    music.play()
     $(".swiper-container").css("display", "none")  
     $("#firstBook").css("display", "block")
     $("#read-button").css("display", "none")
@@ -178,11 +181,11 @@ var pg46 = document.getElementById("pga46")
 $("#Caterpillar").bind("turned", function(event, page) {
 
 
-if (page == 1){
-    music.pause()
-}
+// if (page == 1){
+//     music.pause()
+// }
 if(page == 2) {
-    music.play()
+    // music.play()
     titleAudio.play()
 }
 if (page == 4){
