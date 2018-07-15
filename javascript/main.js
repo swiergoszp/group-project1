@@ -51,9 +51,11 @@ $(document).ready(function() {
                     AddressZip = doc.data().AddresZip,
                     ChildName = doc.data().ChildName,
                     ChildBday = doc.data().ChildBirthday,
-                    BooksOwned = [];
+                    BooksOwned = [],
+                    element;
 
 
+                $("#page-header").text("Just For " + ChildName)
                 $("#child-name").text("Hi, " + ChildName + "!");
                 $("#child-age").text(GetAge(ChildBday).toString() + " Years Old");
                 
@@ -67,16 +69,18 @@ $(document).ready(function() {
                     };
 
                     docRef2.get(getOptions).then(function(doc) {
+                        
                         if (doc.exists) {
 
-                            txtOwned += doc.data().BookTitle;
+                            // txtOwned += doc.data().BookTitle;
 
-                            if ((id+1) < BooksOwned.length)
-                                txtOwned += ', ';
-                            if ((id+1) == (BooksOwned.length - 1))
-                                txtOwned += 'or '
-
-                            $("#books-list").text(txtOwned);
+                            // if ((id+1) < BooksOwned.length)
+                            //     txtOwned += ', ';
+                            // if ((id+1) == (BooksOwned.length - 1))
+                            //     txtOwned += 'or '
+                            //element = $("<li>")
+                            element = doc.data().BookTitle
+                            $("#books-list").append("<li> - "+element+"</li>");
                         }
                         else {
                             // doc.data() will be undefined in this case
