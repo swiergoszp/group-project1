@@ -11,102 +11,110 @@ var TheLibrary = {
             projectId: "kidreadsproject",
             storageBucket: "kidreadsproject.appspot.com",
             messagingSenderId: "735646109840"
-          };
+        };
 
         firebase.initializeApp(config);
           
         // Initialize Cloud Firestore through Firebase
         this.database = firebase.firestore();
-    },
-}
+    }
+};
 
 //***************************************************************/
-$(document).ready(function() {
+$(document).ready(function () {
 //***************************************************************/
 
-        var arrWords = [];
-    
-            TheLibrary.InitializeFirestore();
-            var db = TheLibrary.database,
-                docRef = db.collection("Library").doc("g0uw83YLJsQcMegopfVy");
+    var arrWords = [];
+
+        TheLibrary.InitializeFirestore();
+        var db = TheLibrary.database,
+            docRef = db.collection("Library").doc("g0uw83YLJsQcMegopfVy");
 
             docRef.get().then(function(doc) {
-                if (doc.exists) {
-                
-                    var pages = doc.data().BookPages,
-                        pgCounter = 1,
-                        tagText = '',
-                        tagStyle,
-                        element,
-                        page;
+            if (doc.exists) {
+            
+                var pages = doc.data().BookPages,
+                    fontColor,
+                    fontSize,
+                    pgCounter = 1,
+                    tagText = '',
+                    tagStyle,
+                    element,
+                    page;
 
-                    pages.forEach(function(item, id) {
-                        if (id > 0) {
+                pages.forEach(function(item, id) {
+                    if (id > 0) {
+                        tagStyle = '<div style="background-image: url(' + "'images/pg" + pgCounter.toString() + ".JPG')" + '" />';
+                        element = $(tagStyle);
+                        $("#Caterpillar").turn("addPage", element, pgCounter+3)
 
-                                tagStyle = '<div style="background-image: url(' + "'images/pg" + pgCounter.toString() + ".JPG')" + '" />'
-                                element = $(tagStyle);
-                                $("#Caterpillar").turn("addPage", element, pgCounter+3)
+                        tagText = '';
+                        page = (id * 2)
+                        fontColor = doc.data().FontPages[id];
+                        fontSize = doc.data().FontSizePages[id];
 
-                                tagText = '';
-                                page = (id * 2)
-                                tagText += '<p style="font-size:24px !important;padding:15px;text-align:center;">Page ' + page.toString() + '</p><p>'
+                        tagText += '<p style="font-size:24px !important;padding:15px;text-align:center;">Page ' + page.toString() + '</p><p>'
 
-                                arrWords = item.split(' ');
+                        arrWords = item.split(' ');
 
-                                arrWords.forEach(function(word) {
-                                    tagText += '<a style="font-size:48px !important;padding:15px;" href="#" class="wordLink" text="'+word+'">';
-                                    tagText += word + '</a> '
-                                });
+                        arrWords.forEach(function(word) {
+                            tagText += '<a style="color:' + fontColor + ';font-size:' + fontSize + 'px; !important;padding:15px;" href="#" class="wordLink" text="'+word+'">';
+                            tagText += word + '</a> '
+                        });
 
-                                tagText +='</p>'
-                                pgCounter += 2;
-                        }
-                        element = $('<div class="text-center"/>').html(tagText);
-                        $("#Caterpillar").turn("addPage", element, page+3)
-                    })
-                } else {
-                    // doc.data() will be undefined in this case
-                }
-            }).catch(function(error) {
-                console.log("Error getting document:", error);
-            }); 
-    });
-    
-    $(document).on('click', 'a', function(e) {
-        e.preventDefault(); 
-
-        var word = $(this).attr("text");
-    
-        AWS.config.region = 'us-west-1';
-        AWS.config.accessKeyId = 'AKIAI2EZ7T5G64IDZQ6Q';
-        AWS.config.secretAccessKey = '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';
-    
-        var polly = new AWS.Polly({apiVersion: '2016-06-10'});
-        // Create the Speaker instance
-    
-        var params = {
-            OutputFormat: 'mp3',
-            Text: word,
-            VoiceId: 'Kendra',
-            SampleRate: '22050',
-            TextType: 'text'
-        };
-    
-        polly.synthesizeSpeech(params, function(err, data) {
-            if (err) 
-              console.log(err, err.stack); // an error occurred
-            else {   
-                var buf = data.AudioStream.toString('base64');
-                var snd = new Audio("data:audio/mp3;base64," + buf);
-                snd.play();
+                        tagText +='</p>'
+                        pgCounter += 2;
+                    }
+                    element = $('<div class="text-center"/>').html(tagText);
+                    $("#Caterpillar").turn("addPage", element, page+3)
+                })
+            } else {
+                // doc.data() will be undefined in this case
             }
-        });
+        }).catch(function(error) {
+            console.log("Error getting document:", error);
+    }); 
+});
+    
+//***************************************************************/
+$(document).on('click', 'a', function(e) {
+//***************************************************************/
 
-        return false; 
+    e.preventDefault(); 
+
+    var word = $(this).attr("text");
+
+    AWS.config.region = 'us-west-1';
+    AWS.config.accessKeyId = 'AKIAI2EZ7T5G64IDZQ6Q';
+    AWS.config.secretAccessKey = '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';
+
+    var polly = new AWS.Polly({apiVersion: '2016-06-10'});
+    var params = {
+        OutputFormat: 'mp3',
+        Text: word,
+        VoiceId: 'Kendra',
+        SampleRate: '22050',
+        TextType: 'text'
+    };
+
+    polly.synthesizeSpeech(params, function(err, data) {
+
+        if (err) 
+            console.log(err, err.stack); // an error occurred
+        else {   
+            var buf = data.AudioStream.toString('base64');
+            var snd = new Audio("data:audio/mp3;base64," + buf);
+            snd.play();
+        }
     });
 
+    return false; 
+});
 
+//***************************************************************/
 $(window).ready(function() {
+//***************************************************************/
+
     $('#Caterpillar').turn({
         display: 'double',
         acceleration: true,
@@ -120,69 +128,88 @@ $(window).ready(function() {
      });
 });
 
+//***************************************************************/
 $(window).bind('keydown', function(e){
+//***************************************************************/
+
     if (e.keyCode==37)
         $('#Caterpillar').turn('previous');
     else if (e.keyCode==39)
         $('#Caterpillar').turn('next');
 });
+
+//***************************************************************/
 $('#prev').click(function(){
+//***************************************************************/
+
     $('#Caterpillar').turn('previous');
 });
+
+//***************************************************************/
 $('#nex').click(function(){
-    $('#Caterpillar').turn('next');
+//***************************************************************/
+$('#Caterpillar').turn('next');
     
-});
-
-
+})
+$('#restart').click( function(){
+ //***************************************************************/
+   
+    $('#Caterpillar').turn('page', 1)
+})
+//***************************************************************/
 $("#read-button").on("click" , function() {
+//***************************************************************/
+  
+    music.play()
     $(".swiper-container").css("display", "none")  
     $("#firstBook").css("display", "block")
     $("#read-button").css("display", "none")
 });
+
+//***************************************************************/
 $("#closeBook").on("click", function(){
+//***************************************************************/
+  
     $("#read-button").css("display", "block");
     $(".swiper-container").css("display", "block");
     $("#firstBook").fadeOut("slow")
-
+    music.pause();
 })
+  
+  
+var music = document.getElementById("music")
+music.volume = 0.05;
+var titleAudio = document.getElementById("titlePage")
+var pg2 = document.getElementById("pga2")
+var pg4 = document.getElementById("pga4")
+var pg6 = document.getElementById("pga6")
+var pg8 = document.getElementById("pga8")
+var pg10 = document.getElementById("pga10")
+    pg10.volume = 1;
+var pg12 = document.getElementById("pga12")
+var pg14 = document.getElementById("pga14")
+var pg16 = document.getElementById("pga16")
+var pg18 = document.getElementById("pga18")
+var pg20 = document.getElementById("pga20")
+var pg22 = document.getElementById("pga22")
+var pg24 = document.getElementById("pga24")
+var pg26 = document.getElementById("pga26")
+var pg28 = document.getElementById("pga28");
+var pg30 = document.getElementById("pga30")
+var pg32 = document.getElementById("pga32")
+var pg34 = document.getElementById("pga34")
+var pg36 = document.getElementById("pga36")
+var pg38 = document.getElementById("pga38")
+var pg40 = document.getElementById("pga40")
+var pg42 = document.getElementById("pga42")
+var pg44 = document.getElementById("pga44")
+var pg46 = document.getElementById("pga46")
 
+//***************************************************************/
 $("#Caterpillar").bind("turning", function(event, page) {
+//***************************************************************/
 
-    var music = document.getElementById("music")
-    music.volume = 0.05;
-    var titleAudio = document.getElementById("titlePage")
-    var pg2 = document.getElementById("pga2")
-    var pg4 = document.getElementById("pga4")
-    var pg6 = document.getElementById("pga6")
-    var pg8 = document.getElementById("pga8")
-    var pg10 = document.getElementById("pga10")
-        pg10.volume = 1;
-    var pg12 = document.getElementById("pga12")
-    var pg14 = document.getElementById("pga14")
-    var pg16 = document.getElementById("pga16")
-    var pg18 = document.getElementById("pga18")
-    var pg20 = document.getElementById("pga20")
-    var pg22 = document.getElementById("pga22")
-    var pg24 = document.getElementById("pga24")
-    var pg26 = document.getElementById("pga26")
-    var pg28 = document.getElementById("pga28");
-    var pg30 = document.getElementById("pga30")
-    var pg32 = document.getElementById("pga32")
-    var pg34 = document.getElementById("pga34")
-    var pg36 = document.getElementById("pga36")
-    var pg38 = document.getElementById("pga38")
-    var pg40 = document.getElementById("pga40")
-    var pg42 = document.getElementById("pga42")
-    var pg44 = document.getElementById("pga44")
-    var pg46 = document.getElementById("pga46")
-
-
-if (page == 1){
-    music.pause()
-}
 if(page == 2) {
-    music.play()
     titleAudio.play()
 }
 if (page == 4){
