@@ -28,3 +28,13 @@
 	border-color: brown;
 	display: none;
 }
+
+@media only screen and (max-width: 1200px){
+
+
+
+.flipbook .page  img .hard{
+	width: 300px;
+	height: 136px;
+}
+}
