@@ -85,8 +85,8 @@ $(document).on('click', 'a', function(e) {
     var word = $(this).attr("text");
 
     AWS.config.region = 'us-west-1';
-    AWS.config.accessKeyId = 'AKIAI2EZ7T5G64IDZQ6Q';
-    AWS.config.secretAccessKey = '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';
+    AWS.config.accessKeyId = 'AKIAJYT2QE7OL7FIFNTA';
+    AWS.config.secretAccessKey = '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';
 
     var polly = new AWS.Polly({apiVersion: '2016-06-10'});
     var params = {

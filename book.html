@@ -45,17 +45,15 @@
         <a href="library.html" id="library" onclick="location='library.html'">Library<img src="assets/images/library.png" height="80px" align="right" onclick="location='library.html'"></a>
         <a href="user.html" id="user" onclick="location='user.html'">User<img src="assets/images/user.png" height="78px" align="right" onclick="location='user.html'"></a>
     </div>
+ 
     
-
-    
-
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image:url(assets/images/pigeon.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(assets/images/mouse.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(assets/images/moon.jpg)"></div>
-            <div class="swiper-slide" style="background-image: url(assets/images/caterpillar.jpg"><button class="btn btn-lg btn-primary" id="read-button">Read!</button></div>
+            <div class="swiper-slide" style="background-image: url(assets/images/pigeon.jpg)"></div>
+            <div class="swiper-slide" style="background-image: url(assets/images/mouse.jpg)"></div>
+            <div class="swiper-slide" style="background-image: url(assets/images/moon.jpg)"></div>
+            <div class="swiper-slide" style="background-image: url(assets/images/caterpillar.jpg)"><button class="btn btn-lg btn-primary" id="read-button">Read!</button></div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
@@ -64,7 +62,7 @@
             <button class="read-button">Read!</button>
     </div> -->
 
-    <div class="container" id="firstBook" style= "background-image:url('images/bg.jpg')" display: "none">
+    <div class="container" id="firstBook" style="background-image: url(images/bg.jpg)">
         <div class="row">
             <div class="col-md-12">
                     <div id="Caterpillar" class="flipbook">
@@ -80,8 +78,8 @@
             <div class="col-md-4"></div>
             <div class="col-md-4">
                     <button id="closeBook" class="btn btn-md btn-danger"><span class="fa fa-window-close"></span></button>
-                    <button class="btn btn-large btn-success" id="prev"><span class="fa fa-arrow-circle-left"></span>Previous</button>
-                    <button class="btn btn-large btn-success" id="nex">Next<span class="fa fa-arrow-circle-right"></span></button>
+                    <button class="btn btn-large btn-success" id="prev"><span class="fa fa-arrow-circle-left"></span> Previous</button>
+                    <button class="btn btn-large btn-success" id="nex">Next <span class="fa fa-arrow-circle-right"></span></button>
                     <button class="btn btn-md btn-success" id="restart"><span class="fas fa-undo"></span></button>
             </div>
         </div> 
@@ -137,12 +135,12 @@
     </audio>
     <audio id="pga46" src="audio/pg46.mp3" preload="auto">
     </audio>
+
+
     <!-- Swiper JS -->
     
     <script src="swiper/dist/js/swiper.min.js"></script> 
     
-
-
        <script>
 
         var swiper = new Swiper('.swiper-container', {
