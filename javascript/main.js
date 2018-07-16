@@ -1,5 +1,11 @@
 var TheLibrary = {
     database: {},
+    AddressCity: '',
+    AddressState: '',
+    AddressZip: '',
+    ChildName: '',
+    ChildBday: '',
+    BooksOwned: [],
 
     InitializeFirestore: function() {
     
@@ -16,8 +22,51 @@ var TheLibrary = {
           
         // Initialize Cloud Firestore through Firebase
         this.database = firebase.firestore();
-    }
+    },
+
+    SetPageData: function() {
+
+        var db = TheLibrary.database,
+            UserInfo,
+            BooksInfo,
+            element;
+
+        db.collection("Users").where(firebase.firestore.FieldPath.documentId(),"==","QQREabSxqubD0egD3as3")
+        .get()
+        .then(function(data) {
+
+            UserInfo = data.docs.map(doc => doc.data());
+
+            this.AddressCity = UserInfo[0].AddressCity;
+            this.AddressState = UserInfo[0].AddressState;
+            this.AddressZip = UserInfo[0].AddresZip;
+            this.ChildName = UserInfo[0].ChildName;
+            this.ChildBday = UserInfo[0].ChildBirthday;
+            this.BooksOwned = UserInfo[0].BooksOwned;
+
+            $("#page-header").text("Just For " + this.ChildName);
+            $("#child-name").text("Hi, " + this.ChildName + "!");
+            $("#child-age").text(GetAge(this.ChildBday).toString() + " Years Old");
+
+
+            this.BooksOwned.forEach(function(item, id) {
+
+                db.collection("Library").where(firebase.firestore.FieldPath.documentId(),"==",item)
+                .get()
+                .then (function(data) {
+
+                    BooksInfo = data.docs.map(doc => doc.data());
+
+                    console.log(BooksInfo)
+                    element = $("<li>");
+                    element = BooksInfo[0].BookTitle;
+                    $("#books-list").append("<li> - "+element+"</li>");
+                });
+            }); 
+        });
+    },
 };
+
 
 //***************************************************************/
 $(document).ready(function() {
@@ -26,7 +75,7 @@ $(document).ready(function() {
     // sets up click event for adding book to personal library
     $(".get-book-button").on("click", function() {
         
-        // the class here changes to whichever slide is in the main position
+    // the class here changes to whichever slide is in the main position
         var book = $(".swiper-slide-active").val().trim();
     });
 
@@ -38,66 +87,9 @@ $(document).ready(function() {
     });
 
     TheLibrary.InitializeFirestore();
-    var db = TheLibrary.database,
-        docRef = db.collection("Users").doc("QQREabSxqubD0egD3as3"),
-        txtOwned;
-
-        docRef.get().then(function(doc) {
-            if (doc.exists) {
-            
-                var ParentFirst = doc.data().ParentFirstName,
-                    AddressCity = doc.data().AddressCity,
-                    AddressState  = doc.data().AddressState,
-                    AddressZip = doc.data().AddresZip,
-                    ChildName = doc.data().ChildName,
-                    ChildBday = doc.data().ChildBirthday,
-                    BooksOwned = [],
-                    element;
-
-
-                $("#page-header").text("Just For " + ChildName)
-                $("#child-name").text("Hi, " + ChildName + "!");
-                $("#child-age").text(GetAge(ChildBday).toString() + " Years Old");
-                
-                BooksOwned = doc.data().BooksOwned;
-                txtOwned = 'Today, you can read ';
-
-                BooksOwned.forEach(function(item, id) {
-                    var docRef2 = db.collection("Library").doc(item);
-                    var getOptions = {
-                        source: 'server'
-                    };
-
-                    docRef2.get(getOptions).then(function(doc) {
-                        
-                        if (doc.exists) {
-
-                            // txtOwned += doc.data().BookTitle;
-
-                            // if ((id+1) < BooksOwned.length)
-                            //     txtOwned += ', ';
-                            // if ((id+1) == (BooksOwned.length - 1))
-                            //     txtOwned += 'or '
-                            //element = $("<li>")
-                            element = doc.data().BookTitle
-                            $("#books-list").append("<li> - "+element+"</li>");
-                        }
-                        else {
-                            // doc.data() will be undefined in this case
-                            console.log('does not exist')
-                        }
-                    }).catch(function(error){
-                        console.log("Error getting document: ", error);
-                    });
-                });
-            } else {
-                // doc.data() will be undefined in this case
-                console.log('does not exist')
-            }
-        }).catch(function(error) {
-            console.log("Error getting document: ", error);
-        });
+    TheLibrary.SetPageData();
 });
+
 
 //***************************************************************/
 function GetAge(dateString) {
@@ -108,9 +100,8 @@ function GetAge(dateString) {
     var age = today.getFullYear() - birthDate.getFullYear();
     var m = today.getMonth() - birthDate.getMonth();
 
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate()))
         age--;
-    }
 
     return age;
 }
