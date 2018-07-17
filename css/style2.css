@@ -1,15 +1,11 @@
 
-#Caterpillar {
+#book-content {
     font-family: 'Love Ya Like A Sister';
 }
 
-#Caterpillar .turn-page {
+#book-content .turn-page {
 	background-color: whitesmoke;
 	background-size: 100% 100%;
-}
-
-#cover {
-	background-color: tan;
 }
 
 .flipbook {
@@ -22,7 +18,7 @@
 	height: 450px;
 }
 
-#firstBook{
+#current-book {
 	border-style: solid;
 	border-width: 5px;
 	border-color: brown;
