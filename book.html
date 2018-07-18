@@ -19,9 +19,6 @@
     <!-- custom images from FontAwesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <!-- JS -->
-    <!-- <script src="javascript/main.js"></script> -->
-    
-
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
 </head>
@@ -30,7 +27,6 @@
 <main>
 
     <!--Header-->
-
     <div class="row">
         <div class="col-12">
             <span class="header1">My Books</span>
@@ -53,92 +49,66 @@
             <div class="swiper-slide" style="background-image: url(assets/images/pigeon.jpg)"></div>
             <div class="swiper-slide" style="background-image: url(assets/images/mouse.jpg)"></div>
             <div class="swiper-slide" style="background-image: url(assets/images/moon.jpg)"></div>
-            <div class="swiper-slide" style="background-image: url(assets/images/caterpillar.jpg)"><button class="btn btn-lg btn-primary" id="read-button">Read!</button></div>
+            <div class="swiper-slide" style="background-image: url(assets/images/caterpillar.jpg)">
+                <button class="btn btn-lg btn-primary" id="read-button">Read!</button>
+            </div>
         </div>
+
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
     </div>
-    <!-- <div class="row library-buttons">
-            <button class="read-button">Read!</button>
-    </div> -->
 
-    <div class="container" id="firstBook" style="background-image: url(images/bg.jpg)">
+    <div class="container" id="current-book" style="background-image: url(images/bg.jpg)">
         <div class="row">
             <div class="col-md-12">
-                    <div id="Caterpillar" class="flipbook">
-                            <div class="hard" id="cover" style="background-image: url('images/TitlePage.JPG')"></div>
-                            <div class="hard" id="insideCover"><img src="images/insidecover.JPG" style="width: 300px"></div>
-                            <div class="page" id="title"><h1>The Very Hungry Caterpillar</h1><br/>
-                                <h2>By Eric Carle</h2>
-                            </div>
+                <div id="book-content" class="flipbook">
+                    <div class="hard" id="cover" style="background-image: url('images/TitlePage.JPG')"></div>
+                    <div class="hard" id="insideCover"><img src="images/insidecover2.JPG"></div>
+                    <div class="page" id="title"><h1>The Very Hungry Caterpillar</h1><br/>
+                        <h2>By Eric Carle</h2>
                     </div>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                    <button id="closeBook" class="btn btn-md btn-danger"><span class="fa fa-window-close"></span></button>
-                    <button class="btn btn-large btn-success" id="prev"><span class="fa fa-arrow-circle-left"></span> Previous</button>
-                    <button class="btn btn-large btn-success" id="nex">Next <span class="fa fa-arrow-circle-right"></span></button>
-                    <button class="btn btn-md btn-success" id="restart"><span class="fas fa-undo"></span></button>
+                <button id="closeBook" class="btn btn-md btn-danger"><span class="fa fa-window-close"></span></button>
+                <button class="btn btn-large btn-success" id="prev"><span class="fa fa-arrow-circle-left"></span> Previous</button>
+                <button class="btn btn-large btn-success" id="nex">Next <span class="fa fa-arrow-circle-right"></span></button>
+                <button class="btn btn-md btn-success" id="restart"><span class="fas fa-undo"></span></button>
             </div>
         </div> 
     </div>
     
-    <audio id="titlePage" src="audio/TITLE.mp3" preload="auto">
-    </audio>
-    <audio id="music" src="audio/music.mp3" preload="auto" loop="loop">
-    </audio>
-    <audio id="pga2" src="audio/pg2.mp3" preload="auto">
-    </audio>
-    <audio id="pga4" src="audio/pg4.mp3" preload="auto">
-    </audio>
-    <audio id="pga6" src="audio/pg6.mp3" preload="auto">
-    </audio>
-    <audio id="pga8" src="audio/pg8.mp3" preload="auto">
-    </audio>
-    <audio id="pga10" src="audio/pg10.mp3" preload="auto">
-    </audio>
-    <audio id="pga12" src="audio/pg12.mp3" preload="auto">
-    </audio>
-    <audio id="pga14" src="audio/pg14.mp3" preload="auto">
-    </audio>
-    <audio id="pga16" src="audio/pg16.mp3" preload="auto">
-    </audio>
-    <audio id="pga18" src="audio/pg18.mp3" preload="auto">
-    </audio>
-    <audio id="pga20" src="audio/pg20.mp3" preload="auto">
-    </audio>
-    <audio id="pga22" src="audio/pg22.mp3" preload="auto">
-    </audio>
-    <audio id="pga24" src="audio/pg24.mp3" preload="auto">
-    </audio>
-    <audio id="pga26" src="audio/pg26.mp3" preload="auto">
-    </audio>
-    <audio id="pga28" src="audio/pg28.mp3" preload="auto">
-    </audio>
-    <audio id="pga30" src="audio/pg30.mp3" preload="auto">
-    </audio>
-    <audio id="pga32" src="audio/pg32.mp3" preload="auto">
-    </audio>
-    <audio id="pga34" src="audio/pg34.mp3" preload="auto">
-    </audio>
-    <audio id="pga36" src="audio/pg36.mp3" preload="auto">
-    </audio>
-    <audio id="pga38" src="audio/pg38.mp3" preload="auto">
-    </audio>
-    <audio id="pga40" src="audio/pg40.mp3" preload="auto">
-    </audio>
-    <audio id="pga42" src="audio/pg42.mp3" preload="auto">
-    </audio>
-    <audio id="pga44" src="audio/pg44.mp3" preload="auto">
-    </audio>
-    <audio id="pga46" src="audio/pg46.mp3" preload="auto">
-    </audio>
+    <audio id="titlePage" src="audio/TITLE.mp3" preload="auto"></audio>
+    <audio id="music" src="audio/music.mp3" preload="auto" loop="loop"></audio>
+    <audio id="pga2" src="audio/pg2.mp3" preload="auto"></audio>
+    <audio id="pga4" src="audio/pg4.mp3" preload="auto"></audio>
+    <audio id="pga6" src="audio/pg6.mp3" preload="auto"></audio>
+    <audio id="pga8" src="audio/pg8.mp3" preload="auto"></audio>
+    <audio id="pga10" src="audio/pg10.mp3" preload="auto"></audio>
+    <audio id="pga12" src="audio/pg12.mp3" preload="auto"></audio>
+    <audio id="pga14" src="audio/pg14.mp3" preload="auto"></audio>
+    <audio id="pga16" src="audio/pg16.mp3" preload="auto"></audio>
+    <audio id="pga18" src="audio/pg18.mp3" preload="auto"></audio>
+    <audio id="pga20" src="audio/pg20.mp3" preload="auto"></audio>
+    <audio id="pga22" src="audio/pg22.mp3" preload="auto"></audio>
+    <audio id="pga24" src="audio/pg24.mp3" preload="auto"></audio>
+    <audio id="pga26" src="audio/pg26.mp3" preload="auto"></audio>
+    <audio id="pga28" src="audio/pg28.mp3" preload="auto"></audio>
+    <audio id="pga30" src="audio/pg30.mp3" preload="auto"></audio>
+    <audio id="pga32" src="audio/pg32.mp3" preload="auto"></audio>
+    <audio id="pga34" src="audio/pg34.mp3" preload="auto"></audio>
+    <audio id="pga36" src="audio/pg36.mp3" preload="auto"></audio>
+    <audio id="pga38" src="audio/pg38.mp3" preload="auto"></audio>
+    <audio id="pga40" src="audio/pg40.mp3" preload="auto"></audio>
+    <audio id="pga42" src="audio/pg42.mp3" preload="auto"></audio>
+    <audio id="pga44" src="audio/pg44.mp3" preload="auto"></audio>
+    <audio id="pga46" src="audio/pg46.mp3" preload="auto"></audio>
 
 
     <!-- Swiper JS -->
-    
     <script src="swiper/dist/js/swiper.min.js"></script> 
     
        <script>
