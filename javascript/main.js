@@ -104,7 +104,7 @@ function GetAge(dateString) {
         age--;
 
     return age;
-}
+};
 
 // ***************************************************************/
 // initializes swiper on page

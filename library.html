@@ -12,57 +12,59 @@
     <!-- Custom Font -->
     <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />    
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <!-- FontAwesome Images -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    
 </head>
 <body>
     
-<main>
+    <main>
+        
+        <!--Header-->
+        <div class="row">
+            <div class="col-12">
+                <span class="header1">Library</span>
+            </div>
+        </div>
+
+        <!--Nav Bar-->
+        <div id="mySidenav" class="sidenav">
+            <a href="index.html" id="home">Home<img src="assets/images/home.png" height="70px" align="right"></a>
+            <a href="book.html" id="myBooks">My Books<img src="assets/images/books3.png" height="78px" align="right"></a>
+            <a href="library.html" id="library">Library<img src="assets/images/library.png" height="80px" align="right"></a>
+            <a href="user.html" id="user">User<img src="assets/images/user.png" height="78px" align="right"></a>
+        </div>    
+
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" value="Dont Let the Pigeon Drive the Bus" style="background-image:url(assets/images/pigeon.jpg)"></div>
+                <div class="swiper-slide" value="If You Give A Mouse A Cookie" style="background-image:url(assets/images/mouse.jpg)"></div>
+                <div class="swiper-slide" value="Goodnight Moon" style="background-image:url(assets/images/moon.jpg)"></div>
+                <div class="swiper-slide" value="The Very Hungry Caterpillar" id="thisBook" style="background-image:url(assets/images/caterpillar.jpg)"></div>
+                <div class="swiper-slide" value="The Gas We Pass" style="background-image:url(assets/images/gas.jpg)"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
     
-    <!--Header-->
-    <div class="row">
-        <div class="col-12">
-            <span class="header1">Library</span>
+        <!-- Wishlist Button -->
+        <div class="row library-buttons">
+            <button class="wishlist-button btn btn-md">Add to My Wishlist</button>
         </div>
-    </div>
 
-    <!--Nav Bar-->
-    <div id="mySidenav" class="sidenav">
-        <a href="index.html" id="home">Home<img src="assets/images/home.png" height="70px" align="right"></a>
-        <a href="book.html" id="myBooks">My Books<img src="assets/images/books3.png" height="78px" align="right"></a>
-        <a href="library.html" id="library">Library<img src="assets/images/library.png" height="80px" align="right"></a>
-        <a href="user.html" id="user">User<img src="assets/images/user.png" height="78px" align="right"></a>
-    </div>
+    </main>
 
-    <!-- Swiper -->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" value="Dont Let the Pigeon Drive the Bus" style="background-image:url(assets/images/pigeon.jpg)"></div>
-            <div class="swiper-slide" value="If You Give A Mouse A Cookie" style="background-image:url(assets/images/mouse.jpg)"></div>
-            <div class="swiper-slide" value="Goodnight Moon" style="background-image:url(assets/images/moon.jpg)"></div>
-            <div class="swiper-slide" value="The Very Hungry Caterpillar" id="thisBook" style="background-image:url(assets/images/caterpillar.jpg)"></div>
-            <div class="swiper-slide" value="The Gas We Pass" style="background-image:url(assets/images/gas.jpg)"></div>
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-    </div>
-
-    <!-- Wishlist Button -->
-    <div class="row library-buttons">
-        <button class="wishlist-button btn btn-md">Add to My Wishlist</button>
-    </div>
-
-</main>
-
-<!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- Swiper -->
-<script src="swiper/dist/js/swiper.min.js"></script>
-<!-- Custom JS -->
-<script src="javascript/main.js"></script>
-<!-- Bootstrap JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script src="swiper/dist/js/swiper.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- BootStrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <!-- JS -->
+    <script src="javascript/main.js"></script>
 
 </body>
 </html>

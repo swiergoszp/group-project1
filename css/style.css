@@ -295,19 +295,6 @@ Swiper Start
     justify-content: center;
 }
 
-.get-book-button {
-    margin-right: 10px;
-    background-color: #A64Ac9;
-    color: #F5E6CC;
-    font-size: 150%;
-    font-weight: bold;
-}
-
-.get-book-button:hover {
-    background-color: #F5E6CC;
-    color: #A64Ac9;
-}
-
 .wishlist-button {
     margin-left: 10px;
     background-color: #A64Ac9;
@@ -320,6 +307,7 @@ Swiper Start
     background-color: #F5E6CC;
     color: #A64Ac9;
 }
+
 .read-button {
     margin-left: 10px;
     background-color: #A64Ac9;
@@ -659,20 +647,6 @@ Swiper Start
 .library-buttons {
     justify-content: center;
 }
-
-.get-book-button {
-    margin-right: 10px;
-    background-color: #A64Ac9;
-    color: #F5E6CC;
-    font-size: 150%;
-    font-weight: bold;
-}
-
-.get-book-button:hover {
-    background-color: #F5E6CC;
-    color: #A64Ac9;
-}
-
 .wishlist-button {
     margin-left: 10px;
     background-color: #A64Ac9;
@@ -961,20 +935,6 @@ Swiper Start
 .library-buttons {
     justify-content: center;
 }
-
-.get-book-button {
-    margin-right: 10px;
-    background-color: #A64Ac9;
-    color: #F5E6CC;
-    font-size: 150%;
-    font-weight: bold;
-}
-
-.get-book-button:hover {
-    background-color: #F5E6CC;
-    color: #A64Ac9;
-}
-
 .wishlist-button {
     margin-left: 10px;
     background-color: #A64Ac9;
@@ -1010,9 +970,3 @@ End Media Query 640
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     
 */
-
-
-
-
-
-
